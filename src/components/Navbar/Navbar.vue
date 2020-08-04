@@ -2,44 +2,41 @@
 <style lang="scss" src="./Navbar.scss" scoped></style>
 
 <template>
-  <div class="nav-container">
-    <div class="background"></div>
-    <div class="nav-wrap">
-      <img class="close-nav" src="@/assets/img/x.svg" />
-      <div class="nav">
-        <div class="router-links">
-          <router-link class="nav-item-link" to="/">
-            <div class="nav-item">
+  <div>
+    <button class="open-close-nav-button open-nav-button" @click="isMenuOpen = !isMenuOpen">
+      <img src="@/assets/img/open-menu.svg" />
+    </button>
+    <div class="nav-container" :class="{ open: isMenuOpen }">
+      <div class="background"></div>
+      <div class="nav-wrap">
+        <button class="open-close-nav-button close-nav-button" @click="isMenuOpen = !isMenuOpen">
+          <img src="@/assets/img/x.svg" />
+        </button>
+        <div class="nav">
+          <div class="router-links">
+            <router-link class="nav-item-link" to="/">
               <img class="nav-img" src="@/assets/img/builder/builder-grey.svg" />
               <span class="menu-text">Pracownicy</span>
-            </div>
-          </router-link>
-          <router-link class="nav-item-link" to="/">
-            <div class="nav-item">
+            </router-link>
+            <router-link class="nav-item-link" to="/">
               <img class="nav-img" src="@/assets/img/construction-site/winch-grey.svg" />
               <span class="menu-text">Budowy</span>
-            </div>
-          </router-link>
-          <router-link class="nav-item-link" to="/">
-            <div class="nav-item">
+            </router-link>
+            <router-link class="nav-item-link" to="/">
               <img class="nav-img" src="@/assets/img/client/man-grey.svg" />
               <span class="menu-text">Klienci</span>
-            </div>
-          </router-link>
-          <router-link class="nav-item-link" to="/">
-            <div class="nav-item">
+            </router-link>
+            <router-link class="nav-item-link" to="/">
               <img class="nav-img" src="@/assets/img/notification/bell-grey.svg" />
               <span class="menu-text">Powiadomienia</span>
-            </div>
-          </router-link>
-        </div>
-        <div class="logout-button">
-          <router-link to="/">
-            <div class="nav-item">
+            </router-link>
+          </div>
+          <div class="logout-button">
+            <router-link class="nav-item-link" to="/">
               <img class="nav-img" src="@/assets/img/logout/exit-grey.svg" />
               <span class="menu-text">Wyloguj się</span>
-            </div>
-          </router-link>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>

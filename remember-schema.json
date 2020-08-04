@@ -1,0 +1,49 @@
+{
+  "collections": {
+    "employee": {
+      "_id": "ID",
+      "login": "string",
+      "password": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "telephoneNumber": "string",
+      "isEmployed": "boolean",
+      "diaries": "Array(ID(EmployeesDiary))"
+    },
+    "employeesDiary": {
+      "_id": "ID",
+      "date": "Date",
+      "workingTime": {
+        "from": "string",
+        "to": "string"
+      },
+      "workplace": "ID(Workplace)",
+      "workDone": "string",
+      "additionalInfo": "string"
+    },
+    "workplace": {
+      "_id": "ID",
+      "name": "string",
+      "address": {
+        "city": "string",
+        "street": "string"
+      },
+      "client": "ID(Client)",
+      "workInProgress": "boolean",
+      "materials": "Array(ID(Material))"
+    },
+    "material": {
+      "_id": "ID",
+      "employee": "ID(Employee)",
+      "material": "string",
+      "price": "number"
+    },
+    "client": {
+      "_id": "ID",
+      "firstName": "string",
+      "lastName": "string",
+      "telephoneNumber": "string",
+      "workplaces": "Array(ID(Workplace))"
+    }
+  }
+}

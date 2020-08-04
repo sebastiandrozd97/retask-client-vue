@@ -9,3 +9,12 @@ body {
   margin: 0px;
   background-color: #f4f5f7;
 }
+
+a {
+  text-decoration: none;
+}
+
+button:focus,
+a:focus {
+  outline-color: #0068ff;
+}

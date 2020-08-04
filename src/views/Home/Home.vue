@@ -2,11 +2,7 @@
 <style lang="scss" src="./Home.scss" scoped></style>
 
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <Top />
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'Home'
-};
-</script>
