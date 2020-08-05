@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Styczeń",
+    "value": 120
+  },
+  {
+    "name": "Luty",
+    "value": 140
+  },
+  {
+    "name": "Marzec",
+    "value": 98
+  },
+  {
+    "name": "Kwiecień",
+    "value": 105
+  },
+  {
+    "name": "Maj",
+    "value": 107
+  },
+  {
+    "name": "Czerwiec",
+    "value": 180
+  },
+  {
+    "name": "Lipiec",
+    "value": 210
+  },
+  {
+    "name": "Sierpień",
+    "value": 220
+  },
+  {
+    "name": "Wrzesień",
+    "value": 150
+  },
+  {
+    "name": "Październik",
+    "value": 80
+  },
+  {
+    "name": "Listopad",
+    "value": 110
+  },
+  {
+    "name": "Grudzień",
+    "value": 109
+  }
+]

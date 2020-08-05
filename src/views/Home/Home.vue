@@ -4,5 +4,6 @@
 <template>
   <div class="home">
     <Top />
+    <MonthlyWorkTime :data="data" />
   </div>
 </template>
