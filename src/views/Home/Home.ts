@@ -1,14 +1,19 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import Top from '@/components/Home/Top/Top.vue';
 import MonthlyWorkTime from '@/components/Home/MonthlyWorkTime/MonthlyWorkTime.vue';
-import data from '@/mockData/barChart.json';
+import HourDistribution from '@/components/Home/HourDistribution/HourDistribution.vue';
+import barData from '@/mockData/barChart.json';
+import pieData from '@/mockData/pieChart.json';
 
 @Component({
   components: {
     Top,
-    MonthlyWorkTime
+    MonthlyWorkTime,
+    HourDistribution
   }
 })
 export default class Home extends Vue {
-  data = data;
+  get data() {
+    return { barData, pieData };
+  }
 }
