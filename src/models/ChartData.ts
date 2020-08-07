@@ -1,4 +1,4 @@
-export default class Workplace {
+export default class ChartData {
   name: string;
   value: number;
   constructor(name: string, value: number) {
