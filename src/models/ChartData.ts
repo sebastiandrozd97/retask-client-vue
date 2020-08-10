@@ -1,8 +1,4 @@
-export default class ChartData {
+export type ChartData = {
   name: string;
   value: number;
-  constructor(name: string, value: number) {
-    this.name = name;
-    this.value = value;
-  }
-}
+};

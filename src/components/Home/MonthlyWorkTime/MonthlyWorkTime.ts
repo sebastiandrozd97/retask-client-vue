@@ -1,6 +1,6 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
 import { Chart } from 'chart.js';
-import ChartData from '@/models/ChartData';
+import { ChartData } from '@/models/ChartData';
 import { months } from '@/helpers/months';
 
 @Component
@@ -8,9 +8,9 @@ export default class MonthlyWorkTime extends Vue {
   @Prop() readonly chartData!: ChartData[];
   @Ref() readonly chart!: HTMLCanvasElement;
 
-  chartValues = this.chartData.map(obj => obj.value);
+  private chartValues = this.chartData.map(obj => obj.value);
 
-  get Chart() {
+  private get Chart() {
     const chartContext = this.chart.getContext('2d');
 
     if (!chartContext || !this.chartData) {

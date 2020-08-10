@@ -6,6 +6,6 @@
     <Top />
     <MonthlyWorkTime :chartData="barData" />
     <HourDistribution :chartData="pieData" />
-    <ActiveWorkplaces />
+    <ActiveWorkplaces :workplaces="workplaces" />
   </div>
 </template>

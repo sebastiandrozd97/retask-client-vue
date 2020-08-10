@@ -5,7 +5,8 @@ import HourDistribution from '@/components/Home/HourDistribution/HourDistributio
 import ActiveWorkplaces from '@/components/Home/ActiveWorkplaces/ActiveWorkplaces.vue';
 import barData from '@/mockData/barChart.json';
 import pieData from '@/mockData/pieChart.json';
-import ChartData from '@/models/ChartData';
+import workplaces from '@/mockData/workplaces.json';
+import { ChartData } from '@/models/ChartData';
 
 @Component({
   components: {
@@ -16,11 +17,15 @@ import ChartData from '@/models/ChartData';
   }
 })
 export default class Home extends Vue {
-  get barData(): ChartData[] {
+  private get barData(): ChartData[] {
     return barData;
   }
 
-  get pieData(): ChartData[] {
+  private get pieData(): ChartData[] {
     return pieData;
+  }
+
+  private get workplaces(): string[] {
+    return workplaces;
   }
 }

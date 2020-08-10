@@ -1,4 +1,4 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import Navbar from '@/components/Navbar/Navbar.vue';
 
 @Component({
@@ -6,6 +6,4 @@ import Navbar from '@/components/Navbar/Navbar.vue';
     Navbar
   }
 })
-export default class App extends Vue {
-  @Prop() private msg!: string;
-}
+export default class App extends Vue {}

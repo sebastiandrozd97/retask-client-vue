@@ -3,5 +3,5 @@ import user from '@/mockData/user.json';
 
 @Component
 export default class Top extends Vue {
-  firstName = user.firstName;
+  private firstName = user.firstName;
 }
