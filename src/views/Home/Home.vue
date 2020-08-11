@@ -8,5 +8,6 @@
     <HourDistribution :chartData="pieData" />
     <ActiveWorkplaces :workplaces="workplaces" />
     <Worktime :employees="employees" />
+    <GoTo />
   </div>
 </template>

@@ -8,11 +8,11 @@ export default class Worktime extends Vue {
   private itemsPerPage = 4;
 
   private previousPage(): void {
-    if (this.maxPage / this.itemsPerPage < this.page) this.page -= 1;
+    if (this.page > 1) this.page -= 1;
   }
 
   private nextPage(): void {
-    if (this.maxPage > this.page) this.page += 1;
+    if (this.page < this.maxPage) this.page += 1;
   }
 
   private get maxPage() {
@@ -20,13 +20,10 @@ export default class Worktime extends Vue {
   }
 
   compareEmployees(a: Employee, b: Employee) {
-    let comparison = 0;
-    if (a.worktime > b.worktime) {
-      comparison = 1;
-    } else if (a.worktime < b.worktime) {
-      comparison = -1;
-    }
-    return comparison * -1;
+    if (a.worktime > b.worktime) return -1;
+    if (a.worktime < b.worktime) return 1;
+
+    return 0;
   }
 
   private get filteredEmployees(): Employee[] {

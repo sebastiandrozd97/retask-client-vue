@@ -30,6 +30,10 @@
               <img class="nav-img" src="@/assets/img/notification/bell-grey.svg" />
               <span class="menu-text">Powiadomienia</span>
             </router-link>
+            <router-link class="nav-item-link" to="/">
+              <img class="nav-img" src="@/assets/img/settings/gear-grey.svg" />
+              <span class="menu-text">Ustawienia</span>
+            </router-link>
           </div>
           <div class="logout-button">
             <router-link class="nav-item-link" to="/">

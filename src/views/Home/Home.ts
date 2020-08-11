@@ -4,6 +4,7 @@ import MonthlyWorkTime from '@/components/Home/MonthlyWorkTime/MonthlyWorkTime.v
 import HourDistribution from '@/components/Home/HourDistribution/HourDistribution.vue';
 import ActiveWorkplaces from '@/components/Home/ActiveWorkplaces/ActiveWorkplaces.vue';
 import Worktime from '@/components/Home/Worktime/Worktime.vue';
+import GoTo from '@/components/Home/GoTo/GoTo.vue';
 import barData from '@/mockData/barChart.json';
 import pieData from '@/mockData/pieChart.json';
 import workplaces from '@/mockData/workplaces.json';
@@ -17,7 +18,8 @@ import { Employee } from '@/models/Employee';
     MonthlyWorkTime,
     HourDistribution,
     ActiveWorkplaces,
-    Worktime
+    Worktime,
+    GoTo
   }
 })
 export default class Home extends Vue {

@@ -7,11 +7,11 @@ export default class ActiveWorkplaces extends Vue {
   private itemsPerPage = 5;
 
   private previousPage(): void {
-    if (this.maxPage / this.itemsPerPage < this.page) this.page -= 1;
+    if (this.page > 1) this.page -= 1;
   }
 
   private nextPage(): void {
-    if (this.maxPage > this.page) this.page += 1;
+    if (this.page < this.maxPage) this.page += 1;
   }
 
   private get maxPage() {

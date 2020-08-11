@@ -2,8 +2,8 @@
 <style lang="scss" src="./Worktime.scss" scoped></style>
 
 <template>
-  <div class="worktime-container">
-    <div class="title">Przepracowane godziny</div>
+  <div class="worktime-container container">
+    <div class="dashboard-title">Przepracowane godziny</div>
     <div class="content">
       <div class="employees-list">
         <span class="list-item" v-for="(employee, index) in filteredEmployees" :key="index">
@@ -12,7 +12,7 @@
         </span>
       </div>
       <div class="buttons">
-        <button @click="previousPage()" :class="{ hidden: page == 1 }">Poprzednie</button>
+        <button @click="previousPage()" :class="{ hidden: page === 1 }">Poprzednie</button>
         <button @click="nextPage()" :class="{ hidden: page >= maxPage }">Następne</button>
       </div>
     </div>

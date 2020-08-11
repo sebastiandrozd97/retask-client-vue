@@ -1,0 +1,31 @@
+.go-to-container {
+  height: 250px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      outline: inherit;
+      height: 50%;
+
+      &:first-child {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+      }
+
+      &:focus {
+        color: #0063f7;
+      }
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
+}

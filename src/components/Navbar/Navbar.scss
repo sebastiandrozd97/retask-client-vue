@@ -1,6 +1,11 @@
 .open-close-nav-button {
   background: transparent;
   border: none;
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
 }
 
 .open-nav-button {
@@ -37,8 +42,8 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 20px;
-      height: 20px;
+      width: 14px;
+      height: 14px;
     }
 
     .nav {
@@ -49,10 +54,10 @@
       flex-direction: column;
       justify-content: space-between;
       margin-left: 50px;
-      font-size: 20px;
+      font-size: 14px;
 
       .nav-img {
-        width: 40px;
+        width: 25px;
       }
 
       .router-links {
@@ -68,7 +73,7 @@
         align-items: center;
       }
 
-      span {
+      .menu-text {
         color: rgba(0, 0, 0, 0.6);
         margin-left: 10px;
       }
