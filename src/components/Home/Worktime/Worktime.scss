@@ -1,4 +1,4 @@
-.active-workplaces-container {
+.worktime-container {
   width: 100%;
   height: 290px;
   background-color: #ffffff;
@@ -23,17 +23,23 @@
     height: 100%;
     width: 80%;
 
-    .workplaces-list {
+    .employees-list {
       display: flex;
       flex-direction: column;
-      width: 100%;
       font-size: 14px;
       line-height: 25px;
-      margin-top: 10px;
+      margin-top: 20px;
 
-      span {
-        margin-bottom: 15px;
-        font-weight: 900;
+      .list-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+
+        .list-item-element:first-child {
+          font-weight: 900;
+        }
       }
     }
 
