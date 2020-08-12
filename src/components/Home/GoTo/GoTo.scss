@@ -1,5 +1,12 @@
 .go-to-container {
+  margin-bottom: 20px;
   height: 250px;
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    width: calc(34% - 40px);
+    height: 275px;
+  }
 
   .content {
     display: flex;
@@ -19,12 +26,11 @@
         border-bottom: 2px solid rgba(0, 0, 0, 0.15);
       }
 
-      &:focus {
+      &:focus,
+      &:hover,
+      &:active {
         color: #0063f7;
-      }
-
-      &.hidden {
-        opacity: 0;
+        cursor: pointer;
       }
     }
   }

@@ -4,6 +4,8 @@
 <template>
   <div class="hour-distribution-container container">
     <div class="dashboard-title">Rozkład godzin</div>
-    <canvas ref="chartCanvas" id="myChart"></canvas>
+    <div class="chart-container">
+      <canvas ref="chartCanvas" id="myChart"></canvas>
+    </div>
   </div>
 </template>

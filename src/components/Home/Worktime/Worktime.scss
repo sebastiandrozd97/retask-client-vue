@@ -1,5 +1,12 @@
 .worktime-container {
-  height: 290px;
+  margin-bottom: 20px;
+  height: 275px;
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    width: 33%;
+    margin-right: 20px;
+  }
 
   .content {
     display: flex;
@@ -16,7 +23,7 @@
       margin-top: 20px;
 
       .list-item {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         display: flex;
         justify-content: space-between;
@@ -39,8 +46,11 @@
         padding: 0;
         outline: inherit;
 
-        &:focus {
+        &:focus,
+        &:hover,
+        &:active {
           color: #0063f7;
+          cursor: pointer;
         }
 
         &.hidden {

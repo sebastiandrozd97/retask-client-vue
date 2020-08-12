@@ -4,7 +4,7 @@
 <template>
   <div class="worktime-container container">
     <div class="dashboard-title">Przepracowane godziny</div>
-    <div class="content">
+    <div class="content" ref="listContainer">
       <div class="employees-list">
         <span class="list-item" v-for="(employee, index) in filteredEmployees" :key="index">
           <span class="list-item-element">{{ employee.name }}</span>

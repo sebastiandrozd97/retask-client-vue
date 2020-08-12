@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Top from '@/components/Home/Top/Top.vue';
-import MonthlyWorkTime from '@/components/Home/MonthlyWorkTime/MonthlyWorkTime.vue';
+import MonthlyWorktime from '@/components/Home/MonthlyWorktime/MonthlyWorktime.vue';
 import HourDistribution from '@/components/Home/HourDistribution/HourDistribution.vue';
 import ActiveWorkplaces from '@/components/Home/ActiveWorkplaces/ActiveWorkplaces.vue';
 import Worktime from '@/components/Home/Worktime/Worktime.vue';
@@ -15,7 +15,7 @@ import { Employee } from '@/models/Employee';
 @Component({
   components: {
     Top,
-    MonthlyWorkTime,
+    MonthlyWorktime,
     HourDistribution,
     ActiveWorkplaces,
     Worktime,

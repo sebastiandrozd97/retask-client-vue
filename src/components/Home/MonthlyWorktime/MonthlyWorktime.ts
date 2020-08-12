@@ -4,7 +4,7 @@ import { ChartData } from '@/models/ChartData';
 import { months } from '@/helpers/months';
 
 @Component
-export default class MonthlyWorkTime extends Vue {
+export default class MonthlyWorktime extends Vue {
   @Prop() readonly chartData!: ChartData[];
   @Ref() readonly chart!: HTMLCanvasElement;
 

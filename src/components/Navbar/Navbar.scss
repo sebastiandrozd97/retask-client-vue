@@ -1,3 +1,8 @@
+$desktop: 'desktop';
+$desktop-active: 'desktop-active';
+$mobile: 'mobile';
+$mobile-active: 'mobile-active';
+
 .open-close-nav-button {
   background: transparent;
   border: none;
@@ -5,6 +10,10 @@
 
   img {
     width: 100%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    transform: translateY(-300px);
   }
 }
 
@@ -16,11 +25,13 @@
 
 .nav-container {
   position: fixed;
+  top: 0;
   left: -100%;
   opacity: 0;
   width: 100%;
   height: 100%;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
 
   &.open {
     opacity: 1;
@@ -28,10 +39,21 @@
   }
 
   .background {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     width: 100%;
     height: 100%;
     background-color: rgba(213, 213, 213, 0.8);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    opacity: 1;
+    width: 60px;
+    left: 0px;
+
+    .background {
+      background-color: #28293d;
+      backdrop-filter: none;
+    }
   }
 
   .nav-wrap {
@@ -56,14 +78,118 @@
       margin-left: 50px;
       font-size: 14px;
 
-      .nav-img {
-        width: 25px;
+      @media only screen and (min-width: 1024px) {
+        margin: 0px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+
+        .nav-img {
+          width: 25px;
+        }
+
+        .employees {
+          content: url('../../assets/img/desktop/builder-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/builder-white-active.svg');
+          }
+        }
+
+        .workplaces {
+          width: 23px;
+          content: url('../../assets/img/desktop/winch-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/winch-white-active.svg');
+          }
+        }
+
+        .clients {
+          content: url('../../assets/img/desktop/man-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/man-white-active.svg');
+          }
+        }
+
+        .notifications {
+          width: 23px;
+          content: url('../../assets/img/desktop/bell-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/bell-white-active.svg');
+          }
+        }
+
+        .settings {
+          content: url('../../assets/img/desktop/gear-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/gear-white-active.svg');
+          }
+        }
+
+        .logout {
+          content: url('../../assets/img/desktop/exit-white.svg');
+
+          &:hover {
+            content: url('../../assets/img/desktop-active/exit-white-active.svg');
+          }
+        }
+      }
+
+      .employees-link.router-link-active {
+        .employees {
+          content: url('../../assets/img/desktop-active/builder-white-active.svg');
+        }
+      }
+
+      .workplaces-link.router-link-active {
+        .workplaces {
+          content: url('../../assets/img/desktop-active/winch-white-active.svg');
+        }
+      }
+
+      .clients-link.router-link-active {
+        .clients {
+          content: url('../../assets/img/desktop-active/man-white-active.svg');
+        }
+      }
+
+      .notifications-link.router-link-active {
+        .notifications {
+          content: url('../../assets/img/desktop-active/bell-white-active.svg');
+        }
+      }
+
+      .settings-link.router-link-active {
+        .settings {
+          content: url('../../assets/img/desktop-active/gear-white-active.svg');
+        }
       }
 
       .router-links {
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
+
+        @media only screen and (min-width: 1024px) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .logo-link {
+        transform: translateX(-500%);
+        background-color: transparent;
+
+        .logo {
+          width: 40px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+          transform: translateX(0%);
+        }
       }
 
       .nav-item-link {
@@ -71,11 +197,21 @@
         font-size: 1.2em;
         display: flex;
         align-items: center;
+
+        .img-container {
+          width: 40px;
+          text-align: center;
+        }
       }
 
       .menu-text {
         color: rgba(0, 0, 0, 0.6);
         margin-left: 10px;
+
+        @media only screen and (min-width: 1024px) {
+          position: absolute;
+          transform: translateX(-500%);
+        }
       }
     }
   }

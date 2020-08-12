@@ -1,11 +1,11 @@
-.hour-distribution-container {
-  margin-bottom: 20px;
+.monthly-worktime-container {
+  margin: 60px 0 20px 0;
   width: 100%;
   min-height: 350px;
 
   @media only screen and (min-width: 1024px) {
-    width: calc(40% - 20px);
-    margin-top: 20px;
+    width: 60%;
+    margin: 20px 20px 0 0;
     height: calc(100vh - 335px);
   }
 }

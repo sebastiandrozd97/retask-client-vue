@@ -4,7 +4,7 @@
 <template>
   <div class="home">
     <Top />
-    <MonthlyWorkTime :chartData="barData" />
+    <MonthlyWorktime :chartData="barData" />
     <HourDistribution :chartData="pieData" />
     <ActiveWorkplaces :workplaces="workplaces" />
     <Worktime :employees="employees" />

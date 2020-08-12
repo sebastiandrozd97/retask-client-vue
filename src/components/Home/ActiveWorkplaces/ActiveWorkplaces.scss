@@ -1,5 +1,12 @@
 .active-workplaces-container {
-  height: 290px;
+  margin-bottom: 20px;
+  height: 275px;
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    width: 33%;
+    margin-right: 20px;
+  }
 
   .content {
     display: flex;
@@ -17,7 +24,7 @@
       margin-top: 10px;
 
       span {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         font-weight: 900;
       }
     }
@@ -33,8 +40,11 @@
         padding: 0;
         outline: inherit;
 
-        &:focus {
+        &:focus,
+        &:hover,
+        &:active {
           color: #0063f7;
+          cursor: pointer;
         }
 
         &.hidden {

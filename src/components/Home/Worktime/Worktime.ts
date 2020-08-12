@@ -1,9 +1,11 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
 import { Employee } from '@/models/Employee';
 
 @Component
 export default class Worktime extends Vue {
   @Prop() readonly employees!: Employee[];
+  @Ref() readonly listContainer!: HTMLDivElement;
+
   private page = 1;
   private itemsPerPage = 4;
 
@@ -19,7 +21,7 @@ export default class Worktime extends Vue {
     return this.employees.length / this.itemsPerPage;
   }
 
-  compareEmployees(a: Employee, b: Employee) {
+  private compareEmployees(a: Employee, b: Employee) {
     if (a.worktime > b.worktime) return -1;
     if (a.worktime < b.worktime) return 1;
 
