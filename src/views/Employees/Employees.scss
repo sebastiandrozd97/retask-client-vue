@@ -1,0 +1,43 @@
+.employees-container {
+  width: 90%;
+  margin: auto;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+
+    .title {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      outline: inherit;
+      color: #0063f7;
+      font-weight: 600;
+      width: fit-content;
+
+      &:focus,
+      &:hover,
+      &:active {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

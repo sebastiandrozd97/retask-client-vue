@@ -3,6 +3,13 @@ import App from './views/App/App.vue';
 //import './registerServiceWorker';
 import router from './router';
 import '@/styles/main.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUserTie, faHardHat, faCog, faBuilding, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faUserTie, faHardHat, faCog, faBuilding, faBell, faSignOutAlt);
+
+Vue.component('fa-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 

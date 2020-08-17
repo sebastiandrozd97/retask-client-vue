@@ -83,90 +83,6 @@ $mobile-active: 'mobile-active';
         padding-left: 10px;
         display: flex;
         align-items: center;
-
-        .nav-img {
-          width: 25px;
-        }
-
-        .employees {
-          content: url('../../assets/img/desktop/builder-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/builder-white-active.svg');
-          }
-        }
-
-        .workplaces {
-          width: 23px;
-          content: url('../../assets/img/desktop/winch-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/winch-white-active.svg');
-          }
-        }
-
-        .clients {
-          content: url('../../assets/img/desktop/man-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/man-white-active.svg');
-          }
-        }
-
-        .notifications {
-          width: 23px;
-          content: url('../../assets/img/desktop/bell-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/bell-white-active.svg');
-          }
-        }
-
-        .settings {
-          content: url('../../assets/img/desktop/gear-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/gear-white-active.svg');
-          }
-        }
-
-        .logout {
-          content: url('../../assets/img/desktop/exit-white.svg');
-
-          &:hover {
-            content: url('../../assets/img/desktop-active/exit-white-active.svg');
-          }
-        }
-      }
-
-      .employees-link.router-link-active {
-        .employees {
-          content: url('../../assets/img/desktop-active/builder-white-active.svg');
-        }
-      }
-
-      .workplaces-link.router-link-active {
-        .workplaces {
-          content: url('../../assets/img/desktop-active/winch-white-active.svg');
-        }
-      }
-
-      .clients-link.router-link-active {
-        .clients {
-          content: url('../../assets/img/desktop-active/man-white-active.svg');
-        }
-      }
-
-      .notifications-link.router-link-active {
-        .notifications {
-          content: url('../../assets/img/desktop-active/bell-white-active.svg');
-        }
-      }
-
-      .settings-link.router-link-active {
-        .settings {
-          content: url('../../assets/img/desktop-active/gear-white-active.svg');
-        }
       }
 
       .router-links {
@@ -202,6 +118,36 @@ $mobile-active: 'mobile-active';
           width: 40px;
           text-align: center;
         }
+
+        svg {
+          color: rgba(0, 0, 0, 0.6);
+          margin: 0 10px;
+
+          &:hover {
+            color: rgba(0, 0, 0, 1);
+          }
+
+          @media only screen and (min-width: 1024px) {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .home-button {
+        color: black;
+        font-size: 25px;
+        position: relative;
+        bottom: 30px;
+
+        @media only screen and (min-width: 1024px) {
+          position: absolute;
+          transform: translateX(-500%);
+        }
       }
 
       .menu-text {
@@ -211,6 +157,20 @@ $mobile-active: 'mobile-active';
         @media only screen and (min-width: 1024px) {
           position: absolute;
           transform: translateX(-500%);
+        }
+      }
+
+      .router-link-active {
+        svg {
+          color: #000;
+
+          @media only screen and (min-width: 1024px) {
+            color: #fff;
+          }
+        }
+
+        .menu-text {
+          color: black;
         }
       }
     }

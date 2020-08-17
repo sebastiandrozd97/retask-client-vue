@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "label": "Pracownicy",
+      "route": "/employees",
+      "icon": "hard-hat"
+    },
+    {
+      "label": "Budowy",
+      "route": "/workplaces",
+      "icon": "building"
+    },
+    {
+      "label": "Klienci",
+      "route": "/clients",
+      "icon": "user-tie"
+    },
+    {
+      "label": "Powiadomienia",
+      "route": "/notifications",
+      "icon": "bell"
+    },
+    {
+      "label": "Ustawienia",
+      "route": "/settings",
+      "icon": "cog"
+    }
+  ]
+}

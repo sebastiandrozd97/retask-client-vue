@@ -17,38 +17,19 @@
             <router-link class="nav-item-link logo-link" to="/">
               <img class="nav-img logo" src="@/assets/img/Logo.svg" />
             </router-link>
-            <router-link class="nav-item-link employees-link" to="/employees">
-              <div class="img-container">
-                <img class="nav-img employees" src="@/assets/img/mobile/builder-grey.svg" />
-              </div>
-              <span class="menu-text">Pracownicy</span>
+            <router-link class="nav-item-link home-button" to="/">
+              ReMember
             </router-link>
-            <router-link class="nav-item-link workplaces-link" to="/workplaces">
+            <router-link v-for="(route, index) in routes" :key="index" class="nav-item-link" :to="route.route">
               <div class="img-container">
-                <img class="nav-img workplaces" src="@/assets/img/mobile/winch-grey.svg" />
+                <fa-icon class="nav-icon fa-lg" :icon="route.icon" />
               </div>
-              <span class="menu-text">Budowy</span>
-            </router-link>
-            <router-link class="nav-item-link clients-link" to="/clients">
-              <div class="img-container"><img class="nav-img clients" src="@/assets/img/mobile/man-grey.svg" /></div>
-              <span class="menu-text">Klienci</span>
-            </router-link>
-            <router-link class="nav-item-link notifications-link" to="/notifications">
-              <div class="img-container">
-                <img class="nav-img notifications" src="@/assets/img/mobile/bell-grey.svg" />
-              </div>
-              <span class="menu-text">Powiadomienia</span>
-            </router-link>
-            <router-link class="nav-item-link settings-link" to="/settings">
-              <div class="img-container">
-                <img class="nav-img settings" src="@/assets/img/mobile/gear-grey.svg" />
-              </div>
-              <span class="menu-text">Ustawienia</span>
+              <span class="menu-text">{{ route.label }}</span>
             </router-link>
           </div>
           <div class="logout-button">
-            <router-link class="nav-item-link" to="/login">
-              <div class="img-container"><img class="nav-img logout" src="@/assets/img/mobile/exit-grey.svg" /></div>
+            <router-link class="nav-item-link" to="/login"
+              ><fa-icon class="nav-icon fa-lg" icon="sign-out-alt" />
               <span class="menu-text">Wyloguj się</span>
             </router-link>
           </div>
