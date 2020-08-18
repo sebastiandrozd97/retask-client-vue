@@ -1,0 +1,44 @@
+.employee-container {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+
+  .employee-details {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .working {
+        color: #2fcc71;
+      }
+
+      .not-working {
+        color: #ff3333;
+      }
+    }
+  }
+
+  .icons {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0 auto;
+
+    svg {
+      color: rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

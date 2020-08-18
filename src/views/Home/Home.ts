@@ -8,9 +8,9 @@ import GoTo from '@/components/Home/GoTo/GoTo.vue';
 import barData from '@/mockData/barChart.json';
 import pieData from '@/mockData/pieChart.json';
 import workplaces from '@/mockData/workplaces.json';
-import employees from '@/mockData/employees.json';
+import workers from '@/mockData/workers.json';
 import { ChartData } from '@/models/ChartData';
-import { Employee } from '@/models/Employee';
+import { Worker } from '@/models/Worker';
 
 @Component({
   components: {
@@ -35,7 +35,7 @@ export default class Home extends Vue {
     return workplaces;
   }
 
-  private get employees(): Employee[] {
-    return employees;
+  private get workers(): Worker[] {
+    return workers;
   }
 }

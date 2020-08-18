@@ -6,13 +6,13 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
-    text-align: right;
+    align-items: flex-end;
 
     .title {
       font-size: 25px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     button {
@@ -32,12 +32,9 @@
     }
   }
 
-  .container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .employees-list {
+    position: absolute;
+    top: 90px;
+    width: 90%;
   }
 }

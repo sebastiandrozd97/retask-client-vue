@@ -1,9 +1,9 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
-import { Employee } from '@/models/Employee';
+import { Worker } from '@/models/Worker';
 
 @Component
 export default class Worktime extends Vue {
-  @Prop() readonly employees!: Employee[];
+  @Prop() readonly workers!: Worker[];
   @Ref() readonly listContainer!: HTMLDivElement;
 
   private page = 1;
@@ -18,21 +18,27 @@ export default class Worktime extends Vue {
   }
 
   private get maxPage() {
-    return this.employees.length / this.itemsPerPage;
+    return this.workersWithValidWorktime.length / this.itemsPerPage;
   }
 
-  private compareEmployees(a: Employee, b: Employee) {
+  private get workersWithValidWorktime() {
+    return this.workers.filter(worker => {
+      if (worker.worktime > 0) return worker;
+    });
+  }
+
+  private compareWorkers(a: Worker, b: Worker) {
     if (a.worktime > b.worktime) return -1;
     if (a.worktime < b.worktime) return 1;
 
     return 0;
   }
 
-  private get filteredEmployees(): Employee[] {
-    this.employees.sort(this.compareEmployees);
-    return this.employees.filter((employee, index) => {
+  private get filteredWorkers(): Worker[] {
+    this.workersWithValidWorktime.sort(this.compareWorkers);
+    return this.workersWithValidWorktime.filter((worker, index) => {
       if (index < this.page * this.itemsPerPage && index >= this.page * this.itemsPerPage - this.itemsPerPage)
-        return employee;
+        return worker;
     });
   }
 }

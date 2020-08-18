@@ -1,0 +1,82 @@
+[
+  {
+    "firstName": "Sebastian",
+    "lastName": "Drozd",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Mateusz",
+    "lastName": "Miotłowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Dariusz",
+    "lastName": "Szpachlowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Remigiusz",
+    "lastName": "Fugowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Artur",
+    "lastName": "Płytkowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Damian",
+    "lastName": "Regipsowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Mariusz",
+    "lastName": "Szpachlowy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 100,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Krystian",
+    "lastName": "Malowniczy",
+    "telephoneNumber": "785223993",
+    "isEmployed": true,
+    "worktime": 150,
+    "lastWorkday": "02.06.2020"
+  },
+  {
+    "firstName": "Florian",
+    "lastName": "Pomocniczy",
+    "telephoneNumber": "785223993",
+    "isEmployed": false,
+    "worktime": 0,
+    "lastWorkday": "02.02.2019"
+  },
+  {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "telephoneNumber": "785223993",
+    "isEmployed": false,
+    "worktime": 0,
+    "lastWorkday": "02.04.2019"
+  }
+]

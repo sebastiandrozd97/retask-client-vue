@@ -7,6 +7,8 @@
       <span class="title">Pracownicy</span>
       <button>Dodaj pracownika</button>
     </div>
-    <EmployeesList />
+    <div class="employees-list">
+      <Employee v-for="(worker, index) in filteredWorkers" :key="index" :worker="worker" />
+    </div>
   </div>
 </template>

@@ -17,10 +17,16 @@
             <router-link class="nav-item-link logo-link" to="/">
               <img class="nav-img logo" src="@/assets/img/Logo.svg" />
             </router-link>
-            <router-link class="nav-item-link home-button" to="/">
+            <router-link @click.native="isMenuOpen = !isMenuOpen" class="nav-item-link home-button" to="/">
               ReMember
             </router-link>
-            <router-link v-for="(route, index) in routes" :key="index" class="nav-item-link" :to="route.route">
+            <router-link
+              @click.native="isMenuOpen = !isMenuOpen"
+              v-for="(route, index) in routes"
+              :key="index"
+              class="nav-item-link"
+              :to="route.route"
+            >
               <div class="img-container">
                 <fa-icon class="nav-icon fa-lg" :icon="route.icon" />
               </div>

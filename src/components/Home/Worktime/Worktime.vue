@@ -6,9 +6,9 @@
     <div class="dashboard-title">Przepracowane godziny</div>
     <div class="content" ref="listContainer">
       <div class="employees-list">
-        <span class="list-item" v-for="(employee, index) in filteredEmployees" :key="index">
-          <span class="list-item-element">{{ employee.name }}</span>
-          <span class="list-item-element">{{ employee.worktime }} godzin</span>
+        <span class="list-item" v-for="(worker, index) in filteredWorkers" :key="index">
+          <span class="list-item-element">{{ worker.firstName }} {{ worker.lastName }}</span>
+          <span class="list-item-element">{{ worker.worktime }} godzin</span>
         </span>
       </div>
       <div class="buttons">
