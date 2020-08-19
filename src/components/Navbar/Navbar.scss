@@ -33,9 +33,11 @@ $mobile-active: 'mobile-active';
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   z-index: 1;
 
-  &.open {
-    opacity: 1;
-    transform: translateX(100%);
+  @media only screen and (max-width: 1023px) {
+    &.open {
+      opacity: 1;
+      transform: translateX(100%);
+    }
   }
 
   .background {
@@ -123,7 +125,9 @@ $mobile-active: 'mobile-active';
           color: rgba(0, 0, 0, 0.6);
           margin: 0 10px;
 
-          &:hover {
+          &:hover,
+          &:focus,
+          &:active {
             color: rgba(0, 0, 0, 1);
           }
 

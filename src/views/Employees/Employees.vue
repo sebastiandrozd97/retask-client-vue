@@ -3,12 +3,21 @@
 
 <template>
   <div class="employees-container">
-    <div class="top">
-      <span class="title">Pracownicy</span>
-      <button>Dodaj pracownika</button>
-    </div>
+    <span class="top">
+      Pracownicy
+    </span>
     <div class="employees-list">
+      <div class="header">
+        <span>Imie</span>
+        <span>Nazwisko</span>
+        <span>Numer telefonu</span>
+        <span>Status zatrudnienia</span>
+        <span>Liczba godzin</span>
+        <span>Ostatni dzień roboczy</span>
+      </div>
       <Employee v-for="(worker, index) in filteredWorkers" :key="index" :worker="worker" />
+      <div class="new-employee">Dodaj pracownika</div>
     </div>
+    <NewEmployeeModal :modalState="modalState" />
   </div>
 </template>

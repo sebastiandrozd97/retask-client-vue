@@ -5,16 +5,34 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0;
+  }
 
   .employee-details {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
-    span {
+    .details-section {
       margin-bottom: 10px;
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      span:last-child {
+        font-weight: 900;
+
+        @media only screen and (min-width: 1024px) {
+          font-weight: 400;
+        }
       }
 
       .working {
@@ -25,13 +43,56 @@
         color: #ff3333;
       }
     }
+
+    @media only screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: calc(100% - 120px);
+
+      .details-section {
+        margin: 0 20px;
+        width: calc(100% / 6);
+
+        span:first-child {
+          position: absolute;
+          top: -200vh;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          text-align: center;
+        }
+      }
+    }
   }
 
   .icons {
-    width: 35%;
+    width: 100px;
     display: flex;
     justify-content: space-between;
     margin: 20px auto 0 auto;
+
+    @media only screen and (min-width: 1024px) {
+      position: absolute;
+      right: 40px;
+      margin: 0;
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      outline: inherit;
+
+      &:focus,
+      &:hover,
+      &:active {
+        cursor: pointer;
+        color: black;
+      }
+    }
 
     svg {
       color: rgba(0, 0, 0, 0.5);

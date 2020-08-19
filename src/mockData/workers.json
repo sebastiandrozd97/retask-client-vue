@@ -11,7 +11,7 @@
     "firstName": "Mateusz",
     "lastName": "Miotłowy",
     "telephoneNumber": "785223993",
-    "isEmployed": true,
+    "isEmployed": false,
     "worktime": 100,
     "lastWorkday": "02.06.2020"
   },

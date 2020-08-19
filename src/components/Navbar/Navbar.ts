@@ -8,4 +8,11 @@ export default class Navbar extends Vue {
   get routes() {
     return routes;
   }
+
+  get tabindex() {
+    if (this.isMenuOpen) {
+      return { ['tabindex']: 1 };
+    }
+    return { ['tabindex']: -1 };
+  }
 }
