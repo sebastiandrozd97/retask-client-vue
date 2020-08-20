@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Employee from '@/components/Employees/Employee/Employee.vue';
-import NewEmployeeModal from '@/components/Employees/NewEmployeeModal/NewEmployeeModal.vue';
+import NewEmployeeModal from '@/components/Employees/Modals/NewEmployeeModal/NewEmployeeModal.vue';
 import workers from '@/mockData/workers.json';
 import { Worker } from '@/models/Worker';
 
@@ -11,8 +11,6 @@ import { Worker } from '@/models/Worker';
   }
 })
 export default class Employees extends Vue {
-  private modalState = true;
-
   private get workers(): Worker[] {
     return workers;
   }

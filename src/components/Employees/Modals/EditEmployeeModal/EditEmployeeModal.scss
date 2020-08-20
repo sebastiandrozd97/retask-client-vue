@@ -3,27 +3,25 @@
   opacity: 0;
 }
 
-.add-employee-button {
-  position: absolute;
-  top: 45px;
-  right: 20px;
+.modalOpenButton {
   background: none;
   border: none;
   padding: 0;
   outline: inherit;
-  color: #0063f7;
-  font-weight: 600;
-  width: fit-content;
 
   &:focus,
   &:hover,
   &:active {
     cursor: pointer;
+    color: black;
   }
 
-  @media only screen and (min-width: 1024px) {
-    visibility: hidden;
-    opacity: 0;
+  svg {
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: black;
+    }
   }
 }
 
@@ -36,13 +34,19 @@
   background-color: rgba(18, 26, 28, 0.7);
   display: flex;
   justify-content: center;
+  z-index: 1;
 
   .modal {
     background-color: white;
     width: 90vw;
     margin: auto;
+    border-radius: 5px;
     padding: 20px;
     font-size: 14px;
+
+    @media only screen and (min-width: 1024px) {
+      width: 400px;
+    }
 
     .modal-title {
       font-weight: 900;

@@ -16,8 +16,8 @@
         <span>Ostatni dzień roboczy</span>
       </div>
       <Employee v-for="(worker, index) in filteredWorkers" :key="index" :worker="worker" />
-      <div class="new-employee">Dodaj pracownika</div>
+      <div class="new-employee" @click="$refs.newEmployeeModal.changeModalState()">Dodaj pracownika</div>
     </div>
-    <NewEmployeeModal :modalState="modalState" />
+    <NewEmployeeModal ref="newEmployeeModal" />
   </div>
 </template>

@@ -1,4 +1,5 @@
 export type Worker = {
+  id: number;
   firstName: string;
   lastName: string;
   telephoneNumber: string;

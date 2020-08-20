@@ -1,0 +1,78 @@
+.employees-container {
+  width: 90%;
+  margin: auto;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    margin-bottom: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      left: calc(5% + 30px);
+      top: 30px;
+    }
+  }
+
+  .employees-list {
+    position: absolute;
+    top: 90px;
+    width: 90%;
+
+    @media only screen and (min-width: 1024px) {
+      margin-left: 30px;
+    }
+
+    .header {
+      position: absolute;
+      top: -100%;
+      width: calc(100% - 120px);
+      padding: 20px;
+      font-size: 14px;
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        margin: 0 20px;
+        width: calc(100% / 6);
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          text-align: center;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        position: static;
+      }
+    }
+
+    .new-employee {
+      position: absolute;
+      top: -100%;
+      width: 100%;
+      border: 2.5px dotted #0063f7;
+      padding: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #0063f7;
+      font-weight: 900;
+      cursor: pointer;
+
+      &:hover {
+        border-style: solid;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        position: static;
+      }
+    }
+  }
+}

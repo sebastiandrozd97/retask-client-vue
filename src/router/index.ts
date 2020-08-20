@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/views/Home/Home.vue';
 import Employees from '@/views/Employees/Employees.vue';
+import EmployeesDiary from '@/views/EmployeesDiary/EmployeesDiary.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes: Array<RouteConfig> = [
     path: '/employees',
     name: 'Employees',
     component: Employees
+  },
+  {
+    path: '/employees/:id',
+    name: 'EmployeesDiary',
+    component: EmployeesDiary
   }
 ];
 
