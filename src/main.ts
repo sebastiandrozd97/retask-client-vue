@@ -11,12 +11,24 @@ import {
   faBuilding,
   faBell,
   faSignOutAlt,
-  faExclamationTriangle
+  faExclamationTriangle,
+  faAngleDown
 } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt, faEdit } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faUserTie, faHardHat, faCog, faBuilding, faBell, faSignOutAlt, faTrashAlt, faEdit, faExclamationTriangle);
+library.add(
+  faUserTie,
+  faHardHat,
+  faCog,
+  faBuilding,
+  faBell,
+  faSignOutAlt,
+  faTrashAlt,
+  faEdit,
+  faExclamationTriangle,
+  faAngleDown
+);
 
 Vue.component('fa-icon', FontAwesomeIcon);
 

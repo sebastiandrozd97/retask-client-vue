@@ -42,13 +42,56 @@
       border: none;
       padding: 0;
       outline: inherit;
+      position: relative;
 
       svg {
-        color: rgba(255, 51, 51, 0.5);
+        color: rgba(0, 99, 247, 0.5);
 
         &:hover {
-          color: #ff3333;
+          color: #0063f7;
         }
+      }
+
+      &::before,
+      &::after {
+        --scale: 0;
+        --arrow-size: 10px;
+
+        position: absolute;
+        top: -0.25rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+        transition: 150ms transform;
+        transform-origin: bottom center;
+      }
+
+      &::before {
+        --translate-y: calc(-100% - var(--arrow-size) + 1px);
+
+        padding: 20px;
+        width: max-content;
+        max-width: 150px;
+        border-radius: 8px;
+        text-align: justify;
+        background-color: #0063f7;
+        color: white;
+        content: attr(tooltip-data);
+      }
+
+      &::after {
+        --translate-y: calc(-1 * var(--arrow-size));
+
+        content: '';
+        border: var(--arrow-size) solid transparent;
+        border-top-color: #0063f7;
+        transform-origin: top center;
+      }
+
+      &:focus::before,
+      &:hover::before,
+      &:focus::after,
+      &:hover::after {
+        --scale: 1;
       }
     }
 

@@ -14,9 +14,10 @@
         <span>Budowa</span>
         <span>Wykonana praca</span>
       </div>
-      <Workday v-for="(workingDay, index) in workdays" :key="index" :workingDay="workingDay" />
-      <div class="new-employee" @click="$refs.newWorkdayModal.changeModalState()">Dodaj pracownika</div>
+      <Workday v-for="(workday, index) in workdays" :key="index" :workday="workday" />
+      <div class="new-employee" @click="$refs.newWorkdayModal.changeModalState()">Dodaj</div>
     </div>
     <NewWorkdayModal ref="newWorkdayModal" />
+    <FilterWorkdayModal ref="filterWorkdayModal" />
   </div>
 </template>

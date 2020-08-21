@@ -8,10 +8,12 @@
     </button>
     <div class="modal-background" :class="{ closed: isDeleteModalClosed }">
       <div class="modal">
-        <span class="modal-title">Usunąć pracownika?</span>
+        <span class="modal-title">Usunąć wykonaną pracę?</span>
         <div class="form-buttons">
-          <button @click.prevent="isDeleteModalClosed = !isDeleteModalClosed" class="cancel-button">Anuluj</button>
-          <button @click.prevent="isDeleteModalClosed = !isDeleteModalClosed" class="submit-button">Usuń</button>
+          <button @click="isDeleteModalClosed = !isDeleteModalClosed" class="cancel-button">Anuluj</button>
+          <button @click="deleteWork()" class="submit-button">
+            Usuń
+          </button>
         </div>
       </div>
     </div>

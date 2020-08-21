@@ -2,50 +2,89 @@
 <style lang="scss" src="./EditWorkdayModal.scss" scoped></style>
 
 <template>
-  <div class="new-workday-modal-container">
+  <div class="edit-workday-modal-container">
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
       <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
     </button>
-    <!-- <div class="modal-background" :class="{ closed: isEditModalClosed }">
+    <div class="modal-background" :class="{ closed: isEditModalClosed }">
       <div class="modal">
         <span class="modal-title">Edytuj dane dnia pracy</span>
         <form class="modal-form">
-          <div class="form-element">
-            <label class="modal-label" for="first-name">Imię</label>
+          <div class="form-element row-display">
+            <label class="modal-label" for="date">Data</label>
             <input
               class="modal-input"
-              :value="worker.firstName"
-              type="text"
-              name="first-name"
+              v-model="work.date"
+              type="date"
+              name="date"
               placeholder="Wpisz imię pracownika"
+              required
             />
           </div>
-          <div class="form-element">
-            <label class="modal-label" for="last-name">Nazwisko</label>
-            <input
-              class="modal-input"
-              :value="worker.lastName"
-              type="text"
-              name="last-name"
+          <div class="form-element row-display">
+            <label class="modal-label" for="working-hours-from">Praca od</label>
+            <select
+              class="modal-select"
+              v-model="work.workingFrom"
+              name="working-hours-from"
               placeholder="Wpisz nazwisko pracownika"
-            />
+            >
+              <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
+            </select>
           </div>
-          <div class="form-element">
-            <label class="modal-label" for="telephone-number">Numer telefonu</label>
+          <div class="form-element row-display">
+            <label class="modal-label" for="working-hours-to">Praca do</label>
+            <select class="modal-select" v-model="work.workingTo" name="working-hours-to">
+              <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
+            </select>
+          </div>
+          <div class="form-element row-display">
+            <label class="modal-label" for="worktime">Liczba godzin</label>
             <input
               class="modal-input"
-              :value="worker.telephoneNumber"
+              v-model="work.worktime"
               type="text"
-              name="telephone-number"
-              placeholder="Wpisz numer telefonu pracownika"
+              name="worktime"
+              placeholder="Wpisz liczbę godzin pracownika"
+              required
             />
+          </div>
+          <div class="form-element row-display">
+            <label class="modal-label" for="workplace">Budowa</label>
+            <select class="modal-select" v-model="work.workplace" name="workplace" required>
+              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace">{{ workplace }}</option>
+            </select>
+          </div>
+          <div class="form-element">
+            <label class="modal-label" for="work-done">Wykonana praca</label>
+            <textarea
+              class="modal-textarea"
+              v-model="work.workDone"
+              name="work-done"
+              placeholder="Wpisz wykonaną pracę"
+              oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+            >
+            </textarea>
+          </div>
+          <div class="form-element">
+            <label class="modal-label" for="additional-info">Inne uwagi</label>
+            <textarea
+              class="modal-textarea"
+              v-model="work.additionalInfo"
+              name="additional-info"
+              placeholder="Wpisz dodatkowe informacje"
+              oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+            >
+            </textarea>
           </div>
           <div class="form-buttons">
             <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="cancel-button">Anuluj</button>
-            <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="submit-button">Zatwierdź</button>
+            <button @click.prevent="isEditModalClosed = !isEditModalClosed" @click="editWork()" class="submit-button">
+              Zatwierdź
+            </button>
           </div>
         </form>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>

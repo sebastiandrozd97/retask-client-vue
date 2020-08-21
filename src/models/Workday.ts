@@ -1,7 +1,8 @@
-export type WorkingDay = {
+export type Workday = {
   id: number;
   date: string;
-  workingHours: string;
+  workingFrom: string;
+  workingTo: string;
   worktime: number;
   workplace: string;
   workDone: string;

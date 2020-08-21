@@ -11,7 +11,4 @@ import { Worker } from '@/models/Worker';
 })
 export default class Employee extends Vue {
   @Prop() readonly worker!: Worker;
-
-  EditModalState = false;
-  DeleteModalState = false;
 }

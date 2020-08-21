@@ -20,7 +20,7 @@ export default class MonthlyWorktime extends Vue {
     return new Chart(chartContext, {
       type: 'horizontalBar',
       data: {
-        labels: months,
+        labels: months.map(month => month.name),
         datasets: [
           {
             label: '',
