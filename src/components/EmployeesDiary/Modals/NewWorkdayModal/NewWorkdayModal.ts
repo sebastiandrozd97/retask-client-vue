@@ -20,6 +20,8 @@ export default class NewWorkdayModal extends Vue {
   }
 
   getTimes() {
+    // implement better solution
+
     const timeInterval = 15;
     const times = [];
     let initialTime = 0;

@@ -1,16 +1,17 @@
-.add-item-button {
-  right: 20px;
-}
-
-.filter-modal-background {
-  z-index: 1;
-
+.edit-modal-background {
   .modal {
-    max-height: 450px;
+    width: 90vw;
+    padding: 20px;
+    max-height: 650px;
     overflow: auto;
 
+    @media only screen and (min-width: 1024px) {
+      width: 400px;
+    }
+
     .modal-form {
-      margin-top: 30px;
+      margin-top: 40px;
+
       .form-element {
         display: flex;
         flex-direction: column;
@@ -22,17 +23,20 @@
           margin-bottom: 3px;
         }
 
-        .modal-select {
+        .modal-input {
           border: none;
-          box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.1);
-          background-color: #f4f5f7;
-          height: 25px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          outline: inherit;
+
+          &:focus {
+            transition: border-bottom-color 0.5s ease;
+            border-bottom-color: #0063f7;
+          }
         }
       }
 
       .form-buttons {
         text-align: right;
-
         .submit-button {
           margin-left: 10px;
           background-color: #0068ff;

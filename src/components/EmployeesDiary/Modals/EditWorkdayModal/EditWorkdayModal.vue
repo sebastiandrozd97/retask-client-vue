@@ -6,7 +6,7 @@
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
       <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
     </button>
-    <div class="modal-background" :class="{ closed: isEditModalClosed }">
+    <div class="modal-background edit-modal-background" :class="{ 'closed-modal': isEditModalClosed }">
       <div class="modal">
         <span class="modal-title">Edytuj dane dnia pracy</span>
         <form class="modal-form">

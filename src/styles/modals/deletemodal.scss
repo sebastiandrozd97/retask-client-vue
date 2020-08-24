@@ -1,0 +1,19 @@
+.delete-modal-background {
+  .modal {
+    width: 70vw;
+    padding: 30px 0;
+    text-align: center;
+
+    @media only screen and (min-width: 1024px) {
+      width: 300px;
+    }
+
+    .form-buttons {
+      text-align: center;
+      .submit-button {
+        margin-left: 20px;
+        background-color: #ff3333;
+      }
+    }
+  }
+}

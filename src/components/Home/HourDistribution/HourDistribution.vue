@@ -2,7 +2,7 @@
 <style lang="scss" src="./HourDistribution.scss" scoped></style>
 
 <template>
-  <div class="hour-distribution-container container">
+  <div class="dashboard-section-container">
     <div class="dashboard-title">Rozkład godzin</div>
     <div class="chart-container">
       <canvas ref="chartCanvas" id="myChart"></canvas>

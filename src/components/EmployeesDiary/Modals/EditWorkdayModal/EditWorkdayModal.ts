@@ -9,6 +9,8 @@ export default class EditWorkdayModal extends Vue {
   private isEditModalClosed = true;
 
   getTimes() {
+    // implement better solution
+
     const timeInterval = 15;
     const times = [];
     let initialTime = 0;

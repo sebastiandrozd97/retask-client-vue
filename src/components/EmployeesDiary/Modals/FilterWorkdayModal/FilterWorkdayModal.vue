@@ -3,8 +3,8 @@
 
 <template>
   <div class="new-workday-modal-container">
-    <button class="add-work-button" @click="changeModalState()">Filtruj</button>
-    <div class="modal-background" :class="{ closed: isFilterModalClosed }">
+    <button class="add-item-button" @click="changeModalState()">Filtruj</button>
+    <div class="modal-background filter-modal-background" :class="{ 'closed-modal': isFilterModalClosed }">
       <div class="modal">
         <span class="modal-title">Wyszukiwanie</span>
         <form class="modal-form">

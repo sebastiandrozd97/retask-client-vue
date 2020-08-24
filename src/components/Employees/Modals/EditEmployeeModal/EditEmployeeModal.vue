@@ -1,12 +1,11 @@
 <script lang="ts" src="./EditEmployeeModal.ts"></script>
-<style lang="scss" src="./EditEmployeeModal.scss" scoped></style>
 
 <template>
   <div class="new-employee-modal-container">
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
       <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
     </button>
-    <div class="modal-background" :class="{ closed: isEditModalClosed }">
+    <div class="modal-background edit-modal-background" :class="{ 'closed-modal': isEditModalClosed }">
       <div class="modal">
         <span class="modal-title">Edytuj dane pracownika</span>
         <form class="modal-form">

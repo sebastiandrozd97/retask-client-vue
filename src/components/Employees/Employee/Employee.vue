@@ -2,9 +2,9 @@
 <style lang="scss" src="./Employee.scss" scoped></style>
 
 <template>
-  <div class="employee-container">
+  <div class="list-element-container">
     <router-link class="employee-details" :to="{ name: 'EmployeesDiary', params: { id: worker.id } }">
-      <div class="details-wrap">
+      <div class="item-details-wrap">
         <div class="details-section">
           <span>
             Imię:

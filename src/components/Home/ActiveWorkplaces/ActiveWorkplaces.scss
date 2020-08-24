@@ -1,7 +1,5 @@
-.active-workplaces-container {
-  margin-bottom: 20px;
+.dashboard-section-container {
   height: 275px;
-  width: 100%;
 
   @media only screen and (min-width: 1024px) {
     width: 33%;
@@ -9,47 +7,15 @@
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    width: 80%;
 
-    .workplaces-list {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      font-size: 14px;
-      line-height: 25px;
+    .list-of-items {
       margin-top: 10px;
+      width: 100%;
 
       span {
         margin-bottom: 10px;
         font-weight: 900;
-      }
-    }
-
-    .buttons {
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-
-      button {
-        background: none;
-        border: none;
-        padding: 0;
-        outline: inherit;
-
-        &:focus,
-        &:hover,
-        &:active {
-          color: #0063f7;
-          cursor: pointer;
-        }
-
-        &.hidden {
-          opacity: 0;
-        }
       }
     }
   }

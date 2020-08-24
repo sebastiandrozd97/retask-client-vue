@@ -2,10 +2,10 @@
 <style lang="scss" src="./Worktime.scss" scoped></style>
 
 <template>
-  <div class="worktime-container container">
+  <div class="dashboard-section-container bottom-section-container">
     <div class="dashboard-title">Przepracowane godziny</div>
     <div class="content" ref="listContainer">
-      <div class="employees-list">
+      <div class="list-of-items">
         <span class="list-item" v-for="(worker, index) in filteredWorkers" :key="index">
           <span class="list-item-element">{{ worker.firstName }} {{ worker.lastName }}</span>
           <span class="list-item-element">{{ worker.worktime }} godzin</span>

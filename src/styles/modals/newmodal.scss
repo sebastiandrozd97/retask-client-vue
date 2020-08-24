@@ -1,31 +1,22 @@
-.closed {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.modalOpenButton {
+.add-item-button {
+  position: absolute;
+  top: 50px;
+  right: 90px;
   background: none;
-  border: none;
-  padding: 0;
+  border: 1px solid #0063f7;
+  padding: 5px 10px;
   outline: inherit;
+  color: #0063f7;
+  cursor: pointer;
+  font-weight: 600;
 
-  &:focus,
-  &:hover,
-  &:active {
-    cursor: pointer;
-    color: black;
-  }
-
-  svg {
-    color: rgba(0, 0, 0, 0.5);
-
-    &:hover {
-      color: black;
-    }
+  @media only screen and (min-width: 1024px) {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
-.modal-background {
+.new-modal-background {
   position: fixed;
   left: 0;
   top: 0;
@@ -34,7 +25,6 @@
   background-color: rgba(18, 26, 28, 0.7);
   display: flex;
   justify-content: center;
-  z-index: 1;
 
   .modal {
     background-color: white;
@@ -43,6 +33,7 @@
     border-radius: 5px;
     padding: 20px;
     font-size: 14px;
+    text-align: left;
 
     @media only screen and (min-width: 1024px) {
       width: 400px;

@@ -1,18 +1,6 @@
-.employee-container {
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-
+.list-element-container {
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0;
   }
 
   .employee-details {
@@ -20,27 +8,8 @@
       width: calc(100% - 120px);
     }
 
-    .details-wrap {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      color: black;
-
+    .item-details-wrap {
       .details-section {
-        margin-bottom: 10px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        span:last-child {
-          font-weight: 900;
-
-          @media only screen and (min-width: 1024px) {
-            font-weight: 400;
-          }
-        }
-
         .working {
           color: #2fcc71;
         }
@@ -52,21 +21,12 @@
 
       @media only screen and (min-width: 1024px) {
         flex-direction: row;
-        justify-content: space-between;
 
         .details-section {
           margin: 0 20px;
           width: calc(100% / 6);
 
-          span:first-child {
-            position: absolute;
-            top: -200vh;
-          }
-
-          &:nth-child(3),
-          &:nth-child(4),
-          &:nth-child(5),
-          &:nth-child(6) {
+          &:nth-last-of-type(-n + 4) {
             text-align: center;
           }
         }

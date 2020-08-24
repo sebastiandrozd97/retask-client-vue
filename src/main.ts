@@ -3,6 +3,13 @@ import App from './views/App/App.vue';
 //import './registerServiceWorker';
 import router from './router';
 import '@/styles/main.scss';
+import '@/styles/listitemstyles.scss';
+import '@/styles/modals/newmodal.scss';
+import '@/styles/modals/deletemodal.scss';
+import '@/styles/modals/editmodal.scss';
+import '@/styles/modals/modal.scss';
+import '@/styles/liststyles.scss';
+import '@/styles/dashboardstyles.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faUserTie,

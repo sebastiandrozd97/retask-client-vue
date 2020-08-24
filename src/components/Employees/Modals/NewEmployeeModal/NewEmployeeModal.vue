@@ -3,8 +3,8 @@
 
 <template>
   <div class="new-employee-modal-container">
-    <button class="add-employee-button" @click="isModalClosed = !isModalClosed">Dodaj pracownika</button>
-    <div class="modal-background" :class="{ closed: isModalClosed }">
+    <button class="add-item-button" @click="isModalClosed = !isModalClosed">Dodaj pracownika</button>
+    <div class="modal-background new-modal-background" :class="{ 'closed-modal': isModalClosed }">
       <div class="modal">
         <span class="modal-title">Dodaj nowego pracownika</span>
         <form class="modal-form">

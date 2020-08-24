@@ -1,19 +1,4 @@
-.employee-container {
-  width: 100%;
-  min-height: 60px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-
-  @media only screen and (min-width: 1024px) {
-    align-items: center;
-    border-radius: 0;
-  }
-
+.list-element-container {
   .workday-element {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     position: relative;
@@ -22,18 +7,67 @@
       visibility: hidden;
     }
 
-    @media only screen and (min-width: 1024px) {
-      display: flex;
-      width: 100%;
-      border-bottom: none;
+    &:first-of-type .date {
+      visibility: visible;
     }
 
     &:last-child {
       margin-bottom: 0;
       border-bottom: none;
+    }
 
-      .icons {
-        margin-bottom: 0;
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      width: 100%;
+      border-bottom: none;
+      margin-bottom: 30px;
+    }
+
+    .item-details-wrap {
+      .details-section {
+        &:last-child {
+          text-align: justify;
+          span {
+            font-weight: 400;
+          }
+        }
+
+        @media only screen and (min-width: 1024px) {
+          text-align: center;
+          margin: 0;
+
+          &:nth-last-of-type(-n + 2) {
+            text-align: left;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: calc(100% - 150px);
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1.5fr 3fr;
+        align-items: center;
+      }
+    }
+
+    .icons-three-elements {
+      width: 150px;
+    }
+
+    .icons-two-elements {
+      width: 100px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto 20px auto;
+
+      @media only screen and (min-width: 1024px) {
+        align-items: center;
+        margin: 0;
+        width: 150px;
       }
     }
 
@@ -73,7 +107,7 @@
         width: max-content;
         max-width: 150px;
         border-radius: 8px;
-        text-align: justify;
+        text-align: left;
         background-color: #0063f7;
         color: white;
         content: attr(tooltip-data);
@@ -95,93 +129,5 @@
         --scale: 1;
       }
     }
-
-    .employee-details {
-      display: flex;
-      flex-direction: column;
-      color: black;
-
-      .details-section {
-        margin-bottom: 10px;
-
-        span:last-child {
-          font-weight: 900;
-
-          @media only screen and (min-width: 1024px) {
-            font-weight: 400;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-          text-align: justify;
-          span {
-            font-weight: 400;
-          }
-        }
-
-        .working {
-          color: #2fcc71;
-        }
-
-        .not-working {
-          color: #ff3333;
-        }
-
-        @media only screen and (min-width: 1024px) {
-          text-align: center;
-          margin: 0;
-
-          &:nth-child(4),
-          &:last-child {
-            text-align: left;
-          }
-        }
-      }
-
-      @media only screen and (min-width: 1024px) {
-        flex-direction: row;
-        width: calc(100% - 150px);
-        padding-right: 20px;
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1.5fr 3fr;
-        align-items: center;
-
-        .details-section {
-          span:first-child {
-            position: absolute;
-            top: -200vh;
-          }
-
-          &:nth-child(3) {
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    .three-elements {
-      width: 150px;
-    }
-
-    .two-elements {
-      width: 100px;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px auto 20px auto;
-
-      @media only screen and (min-width: 1024px) {
-        align-items: center;
-        margin: 0;
-        width: 150px;
-      }
-    }
-  }
-
-  .workday-element:first-of-type .date {
-    visibility: visible;
   }
 }
