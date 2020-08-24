@@ -8,12 +8,7 @@
   outline: inherit;
   color: #0063f7;
   font-weight: 600;
-  width: fit-content;
-
-  &:hover,
-  &:active {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   @media only screen and (min-width: 1024px) {
     visibility: hidden;

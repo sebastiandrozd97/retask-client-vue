@@ -30,50 +30,55 @@
     .header {
       position: absolute;
       top: -100%;
-      width: calc(100% - 120px);
+      width: calc(100% - 170px);
       padding: 20px;
       font-size: 14px;
       font-weight: 900;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: left;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 1fr 1.5fr 3fr;
 
       span {
         margin: 0 20px;
-        width: calc(100% / 6);
 
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6) {
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
           text-align: center;
         }
       }
 
       @media only screen and (min-width: 1024px) {
         position: static;
+
+        span {
+          margin: 0;
+          text-align: left;
+        }
       }
     }
+  }
 
-    .new-employee {
-      position: absolute;
-      top: -100%;
-      width: 100%;
-      border: 2.5px dotted #0063f7;
-      padding: 20px;
-      margin-bottom: 15px;
-      text-align: center;
+  .desktop-buttons {
+    position: absolute;
+    top: -100%;
+    display: flex;
+
+    @media only screen and (min-width: 1024px) {
+      top: 25px;
+      right: 50px;
+    }
+  }
+
+  .new-employee {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-right: 20px;
+
+    &:hover {
       color: #0063f7;
-      font-weight: 900;
-      cursor: pointer;
-
-      &:hover {
-        border-style: solid;
-      }
-
-      @media only screen and (min-width: 1024px) {
-        position: static;
-      }
+      border-color: #0063f7;
     }
   }
 }

@@ -6,6 +6,10 @@
     <span class="top">
       Dziennik pracownika
     </span>
+    <div class="desktop-buttons">
+      <div class="new-employee" @click="$refs.newWorkdayModal.changeModalState()">Dodaj</div>
+      <div class="new-employee" @click="$refs.filterWorkdayModal.changeModalState()">Filtruj</div>
+    </div>
     <div class="employees-list">
       <div class="header">
         <span>Data</span>
@@ -15,7 +19,6 @@
         <span>Wykonana praca</span>
       </div>
       <Workday v-for="(workday, index) in workdays" :key="index" :workday="workday" />
-      <div class="new-employee" @click="$refs.newWorkdayModal.changeModalState()">Dodaj</div>
     </div>
     <NewWorkdayModal ref="newWorkdayModal" />
     <FilterWorkdayModal ref="filterWorkdayModal" />

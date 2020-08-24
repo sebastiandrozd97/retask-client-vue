@@ -7,7 +7,7 @@
       "workingTo": "16:00",
       "worktime": 8,
       "workplace": "Krefeld Poddasze",
-      "workDone": "elektryka, laminat, osadzenie futryny, materiał, sprzątanie, fuga podłoga w kuchni",
+      "workDone": "elektryka, laminat, osadzenie futryny, materiał, sprzątanie, fuga podłoga w kuchni, elektryka, laminat, osadzenie futryny, materiał, sprzątanie, fuga podłoga w kuchni, elektryka, laminat, osadzenie futryny, materiał, sprzątanie, fuga podłoga w kuchni",
       "additionalInfo": "2 worki cementu z magazynu, szpachelki, zakup materiału na budowę 20 euro"
     }
   ],
@@ -36,7 +36,7 @@
   [
     {
       "id": 4,
-      "date": "2020-06-03",
+      "date": "2020-06-04",
       "workingFrom": "08:00",
       "workingTo": "16:00",
       "worktime": 8,
@@ -48,7 +48,7 @@
   [
     {
       "id": 5,
-      "date": "2020-06-04",
+      "date": "2020-06-05",
       "workingFrom": "08:00",
       "workingTo": "16:00",
       "worktime": 8,

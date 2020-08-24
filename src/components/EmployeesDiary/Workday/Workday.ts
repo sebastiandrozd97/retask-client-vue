@@ -13,5 +13,9 @@ import moment from 'moment';
 export default class Workday extends Vue {
   @Prop() readonly workday!: WorkdayModel[];
 
-  private date = moment(this.workday[0].date).format('DD.MM');
+  get date() {
+    if (this.workday) {
+      return moment(this.workday[0].date).format('DD.MM');
+    }
+  }
 }
