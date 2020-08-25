@@ -2,7 +2,7 @@
 
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar v-if="show" />
     <router-view />
   </div>
 </template>

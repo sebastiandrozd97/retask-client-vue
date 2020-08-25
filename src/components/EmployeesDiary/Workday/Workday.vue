@@ -40,7 +40,7 @@
       </div>
       <div class="icons" :class="[work.additionalInfo ? 'icons-three-elements' : 'icons-two-elements']">
         <button v-if="work.additionalInfo" :tooltip-data="work.additionalInfo" class="additional-info">
-          <fa-icon class="employee-icon far fa-2x" :icon="['fas', 'exclamation-triangle']" />
+          <fa-icon class="fa-2x" :icon="['fas', 'exclamation-triangle']" />
         </button>
         <div v-if="!work.additionalInfo" class="additional-info"></div>
         <EditWorkdayModal :work="work" />

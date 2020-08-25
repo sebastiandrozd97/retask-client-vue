@@ -34,7 +34,7 @@
             </router-link>
           </div>
           <div class="logout-button">
-            <router-link class="nav-item-link" to="/login">
+            <router-link class="nav-item-link" to="/auth">
               <fa-icon class="nav-icon fa-lg" icon="sign-out-alt" />
               <span class="menu-text">Wyloguj się</span>
             </router-link>

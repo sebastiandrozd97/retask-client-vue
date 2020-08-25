@@ -4,7 +4,7 @@
 <template>
   <div class="edit-workday-modal-container">
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
-      <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
+      <fa-icon class="fa-2x" :icon="['far', 'edit']" />
     </button>
     <div class="modal-background edit-modal-background" :class="{ 'closed-modal': isEditModalClosed }">
       <div class="modal">
@@ -12,23 +12,11 @@
         <form class="modal-form">
           <div class="form-element row-display">
             <label class="modal-label" for="date">Data</label>
-            <input
-              class="modal-input"
-              v-model="work.date"
-              type="date"
-              name="date"
-              placeholder="Wpisz imię pracownika"
-              required
-            />
+            <input class="modal-input" v-model="work.date" type="date" name="date" required />
           </div>
           <div class="form-element row-display">
             <label class="modal-label" for="working-hours-from">Praca od</label>
-            <select
-              class="modal-select"
-              v-model="work.workingFrom"
-              name="working-hours-from"
-              placeholder="Wpisz nazwisko pracownika"
-            >
+            <select class="modal-select" v-model="work.workingFrom" name="working-hours-from">
               <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
             </select>
           </div>

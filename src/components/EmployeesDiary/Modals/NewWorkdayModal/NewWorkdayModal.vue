@@ -21,12 +21,7 @@
           </div>
           <div class="form-element row-display">
             <label class="modal-label" for="working-hours-from">Praca od</label>
-            <select
-              class="modal-select"
-              v-model="newWork.workingFrom"
-              name="working-hours-from"
-              placeholder="Wpisz nazwisko pracownika"
-            >
+            <select class="modal-select" v-model="newWork.workingFrom" name="working-hours-from">
               <option value="">Wybierz godzinę</option>
               <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
             </select>

@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/views/Home/Home.vue';
 import Employees from '@/views/Employees/Employees.vue';
 import EmployeesDiary from '@/views/EmployeesDiary/EmployeesDiary.vue';
+import Auth from '@/views/Auth/Auth.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes: Array<RouteConfig> = [
     path: '/employees/:id',
     name: 'EmployeesDiary',
     component: EmployeesDiary
+  },
+  {
+    path: '/auth',
+    name: 'Auth',
+    component: Auth
   }
 ];
 
