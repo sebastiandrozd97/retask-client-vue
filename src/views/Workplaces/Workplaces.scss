@@ -1,0 +1,41 @@
+.list-container {
+  .employees-list {
+    .header {
+      width: calc(100% - 150px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        width: 25%;
+
+        &:nth-last-of-type(-n + 2) {
+          text-align: center;
+          width: 12.5%;
+        }
+      }
+    }
+
+    .new-workplace {
+      position: absolute;
+      top: -100%;
+      width: 100%;
+      border: 2.5px dotted #0063f7;
+      padding: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #0063f7;
+      font-weight: 900;
+      cursor: pointer;
+      line-height: 30px;
+
+      &:hover {
+        border-style: solid;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        position: static;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import years from '@/mockData/years.json';
 import { months } from '@/helpers/months';
 import { Component, Vue } from 'vue-property-decorator';
 import { Month } from '@/models/Month';
+import { Workplace } from '@/models/Workplace';
 
 @Component
 export default class FilterWorkdayModal extends Vue {
@@ -12,7 +13,7 @@ export default class FilterWorkdayModal extends Vue {
     this.isFilterModalClosed = !this.isFilterModalClosed;
   }
 
-  get workplaces(): string[] {
+  get workplaces(): Workplace[] {
     return workplaces;
   }
 

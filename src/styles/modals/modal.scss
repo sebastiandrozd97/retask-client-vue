@@ -25,6 +25,13 @@
   }
 }
 
+.modal-select {
+  border: none;
+  box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #f4f5f7;
+  height: 25px;
+}
+
 .modal-background {
   position: fixed;
   left: 0;
@@ -38,17 +45,12 @@
 
   .modal {
     background-color: white;
-    width: 90vw;
     margin: auto;
     border-radius: 5px;
     padding: 20px;
     font-size: 14px;
     max-height: 650px;
     overflow: auto;
-
-    @media only screen and (min-width: 1024px) {
-      width: 400px;
-    }
 
     .modal-title {
       font-weight: 900;

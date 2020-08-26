@@ -6,7 +6,7 @@
     <div class="dashboard-title">Aktualne budowy</div>
     <div class="content">
       <div class="list-of-items">
-        <span v-for="(workplace, index) in filteredWorkplaces" :key="index">{{ workplace }}</span>
+        <span v-for="(workplace, index) in filteredWorkplaces" :key="index">{{ workplace.name }}</span>
       </div>
       <div class="buttons">
         <button @click="previousPage()" :class="{ hidden: page === 1 }">Poprzednie</button>

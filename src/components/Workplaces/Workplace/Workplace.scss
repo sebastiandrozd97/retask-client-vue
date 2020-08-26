@@ -1,0 +1,65 @@
+.list-element-container {
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  .employee-details {
+    @media only screen and (min-width: 1024px) {
+      width: calc(100% - 150px);
+    }
+
+    .item-details-wrap {
+      .details-section {
+        display: flex;
+        align-items: center;
+
+        &:nth-last-child(-n + 2) {
+          justify-content: center;
+        }
+
+        .open {
+          color: #2fcc71;
+        }
+
+        .not-open {
+          color: #ff3333;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        flex-direction: row;
+
+        .details-section {
+          margin: 0 20px;
+          width: 25%;
+
+          &:nth-last-of-type(-n + 2) {
+            text-align: center;
+            width: 12.5%;
+          }
+        }
+      }
+    }
+  }
+
+  .icons {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0 auto;
+
+    @media only screen and (min-width: 1024px) {
+      position: absolute;
+      right: 40px;
+      margin: 0;
+    }
+
+    svg {
+      color: rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

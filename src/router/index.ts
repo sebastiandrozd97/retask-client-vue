@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/views/Home/Home.vue';
 import Employees from '@/views/Employees/Employees.vue';
+import Workplaces from '@/views/Workplaces/Workplaces.vue';
 import EmployeesDiary from '@/views/EmployeesDiary/EmployeesDiary.vue';
 import Auth from '@/views/Auth/Auth.vue';
 
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/employees/:id',
     name: 'EmployeesDiary',
     component: EmployeesDiary
+  },
+  {
+    path: '/workplaces',
+    name: 'Workplaces',
+    component: Workplaces
   },
   {
     path: '/auth',

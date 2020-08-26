@@ -26,7 +26,9 @@
             <label class="modal-label" for="workplace">Wybierz budowę</label>
             <select class="modal-select" name="workplace" ref="workplaceSelect" required>
               <option value="">Wybierz budowę</option>
-              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace">{{ workplace }}</option>
+              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.name">{{
+                workplace.name
+              }}</option>
             </select>
           </div>
           <div class="form-buttons">

@@ -40,7 +40,9 @@
           <div class="form-element row-display">
             <label class="modal-label" for="workplace">Budowa</label>
             <select class="modal-select" v-model="work.workplace" name="workplace" required>
-              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace">{{ workplace }}</option>
+              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.name">{{
+                workplace.name
+              }}</option>
             </select>
           </div>
           <div class="form-element">

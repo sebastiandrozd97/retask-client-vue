@@ -2,7 +2,7 @@
 <style lang="scss" src="./EmployeesDiary.scss" scoped></style>
 
 <template>
-  <div class="employees-container">
+  <div class="list-container">
     <span class="top">
       Dziennik pracownika
     </span>

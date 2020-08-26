@@ -1,6 +1,7 @@
 import { Workday as WorkdayModel } from '@/models/Workday';
 import workplaces from '@/mockData/workplaces.json';
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Workplace } from '@/models/Workplace';
 
 @Component
 export default class EditWorkdayModal extends Vue {
@@ -29,7 +30,7 @@ export default class EditWorkdayModal extends Vue {
     // TODO: finish function
   }
 
-  get workplaces(): string[] {
+  get workplaces(): Workplace[] {
     return workplaces;
   }
 }

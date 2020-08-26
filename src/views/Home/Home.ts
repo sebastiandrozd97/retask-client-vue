@@ -11,6 +11,7 @@ import workplaces from '@/mockData/workplaces.json';
 import workers from '@/mockData/workers.json';
 import { ChartData } from '@/models/ChartData';
 import { Worker } from '@/models/Worker';
+import { Workplace } from '@/models/Workplace';
 
 @Component({
   components: {
@@ -31,7 +32,7 @@ export default class Home extends Vue {
     return pieData;
   }
 
-  private get workplaces(): string[] {
+  private get workplaces(): Workplace[] {
     return workplaces;
   }
 

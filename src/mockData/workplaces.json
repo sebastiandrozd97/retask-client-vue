@@ -1,10 +1,68 @@
 [
-  "Tonisvorst",
-  "Koch MG",
-  "Traar Paweł Kolega",
-  "Olaf",
-  "Jorg",
-  "Krefeld Poddasze",
-  "Duisburg płytki",
-  "Monchengladbach malowanie"
+  {
+    "id": 1,
+    "name": "Koch MG",
+    "address": {
+      "city": "Monchengladbach",
+      "street": "Duisburgerstr 27"
+    },
+    "client": "Thomas Koch",
+    "isOpen": true,
+    "worktime": 100
+  },
+  {
+    "id": 2,
+    "name": "Traar Paweł Kolega",
+    "address": {
+      "city": "Krefeld",
+      "street": "Hochstr 12"
+    },
+    "client": "Thomas Traar",
+    "isOpen": true,
+    "worktime": 120
+  },
+  {
+    "id": 3,
+    "name": "Paweł dom Tonisvorst",
+    "address": {
+      "city": "Tonisvorst",
+      "street": "Jakasstr 38"
+    },
+    "client": "Paweł Paweł",
+    "isOpen": false,
+    "worktime": 300
+  },
+  {
+    "id": 4,
+    "name": "Olaf",
+    "address": {
+      "city": "Dortmund",
+      "street": "Strasse 12"
+    },
+    "client": "Thomas Olaf",
+    "isOpen": false,
+    "worktime": 312
+  },
+  {
+    "id": 5,
+    "name": "Jorg",
+    "address": {
+      "city": "Krefeld",
+      "street": "Strasse 27"
+    },
+    "client": "Thomas Jorg",
+    "isOpen": true,
+    "worktime": 240
+  },
+  {
+    "id": 6,
+    "name": "Pesch",
+    "address": {
+      "city": "Krefeld",
+      "street": "Strasse 30"
+    },
+    "client": "Thomas Pesch",
+    "isOpen": true,
+    "worktime": 60
+  }
 ]

@@ -2,7 +2,7 @@
 <style lang="scss" src="./Employees.scss" scoped></style>
 
 <template>
-  <div class="employees-container">
+  <div class="list-container">
     <span class="top">
       Pracownicy
     </span>
