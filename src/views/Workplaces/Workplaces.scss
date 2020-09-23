@@ -6,13 +6,21 @@
       justify-content: space-between;
       align-items: center;
 
-      span {
-        width: 25%;
+      span:nth-last-of-type(-n + 2) {
+        text-align: center;
+        width: 12.5%;
+      }
 
-        &:nth-last-of-type(-n + 2) {
-          text-align: center;
-          width: 12.5%;
-        }
+      .header-name {
+        width: 25%;
+      }
+
+      .header-address {
+        width: 32%;
+      }
+
+      .header-client {
+        width: 18%;
       }
     }
 
@@ -27,7 +35,6 @@
       color: #0063f7;
       font-weight: 900;
       cursor: pointer;
-      line-height: 30px;
 
       &:hover {
         border-style: solid;

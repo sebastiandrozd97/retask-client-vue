@@ -5,7 +5,7 @@
   <div class="list-element-container">
     <router-link class="employee-details" :to="{ name: 'Workplaces', params: { id: workplace.id } }">
       <div class="item-details-wrap">
-        <div class="details-section">
+        <div class="details-section name-section">
           <span>
             Nazwa:
           </span>
@@ -13,16 +13,13 @@
             {{ workplace.name }}
           </span>
         </div>
-        <div class="details-section">
+        <div class="details-section address-section">
           <span>
             Adres:
           </span>
-          <span>
-            {{ workplace.address.city }}, <br class="address-spacing" />
-            {{ workplace.address.street }}
-          </span>
+          <span> {{ workplace.address.city }}, {{ workplace.address.street }} </span>
         </div>
-        <div class="details-section">
+        <div class="details-section client-section">
           <span>
             Klient:
           </span>

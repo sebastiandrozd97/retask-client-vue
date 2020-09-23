@@ -41,12 +41,23 @@
 
         .details-section {
           margin: 0 20px;
-          width: 25%;
 
           &:nth-last-of-type(-n + 2) {
             text-align: center;
             width: 12.5%;
           }
+        }
+
+        .name-section {
+          width: 25%;
+        }
+
+        .address-section {
+          width: 32%;
+        }
+
+        .client-section {
+          width: 18%;
         }
       }
     }

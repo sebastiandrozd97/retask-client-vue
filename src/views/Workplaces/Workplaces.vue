@@ -8,9 +8,9 @@
     </span>
     <div class="employees-list">
       <div class="header">
-        <span>Nazwa</span>
-        <span>Adres</span>
-        <span>Klient</span>
+        <span class="header-name">Nazwa</span>
+        <span class="header-address">Adres</span>
+        <span class="header-client">Klient</span>
         <span>Status budowy</span>
         <span>Liczba godzin</span>
       </div>
