@@ -4,8 +4,16 @@
 <template>
   <div class="dashboard-section-container bottom-section-container">
     <div class="content">
-      <button>Przejdź do pracowników</button>
-      <button>Przejdź do budów</button>
+      <router-link to="/employees">
+        <button>
+          Przejdź do budów
+        </button>
+      </router-link>
+      <router-link to="/workplaces">
+        <button>
+          Przejdź do budów
+        </button>
+      </router-link>
     </div>
   </div>
 </template>

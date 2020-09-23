@@ -10,9 +10,6 @@
 
     .item-details-wrap {
       .details-section {
-        display: flex;
-        align-items: center;
-
         &:nth-last-child(-n + 2) {
           justify-content: center;
         }
@@ -23,6 +20,19 @@
 
         .not-open {
           color: #ff3333;
+        }
+
+        .address-spacing {
+          display: none;
+        }
+
+        @media only screen and (min-width: 1024px) {
+          display: flex;
+          align-items: center;
+
+          .address-spacing {
+            display: block;
+          }
         }
       }
 

@@ -13,13 +13,12 @@
             {{ workplace.name }}
           </span>
         </div>
-
         <div class="details-section">
           <span>
             Adres:
           </span>
           <span>
-            {{ workplace.address.city }}, <br />
+            {{ workplace.address.city }}, <br class="address-spacing" />
             {{ workplace.address.street }}
           </span>
         </div>
