@@ -6,11 +6,16 @@
   z-index: 1;
 
   .modal {
-    max-height: 450px;
     overflow: auto;
+    width: 90vw;
+
+    @media only screen and (min-width: 1024px) {
+      width: 400px;
+    }
 
     .modal-form {
       margin-top: 30px;
+
       .form-element {
         display: flex;
         flex-direction: column;
