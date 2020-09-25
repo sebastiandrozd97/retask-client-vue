@@ -3,11 +3,11 @@
 
 <template>
   <div class="home">
-    <Top />
-    <MonthlyWorktime :chartData="barData" />
-    <HourDistribution :chartData="pieData" />
-    <ActiveWorkplaces :workplaces="workplaces" />
-    <Worktime :workers="workers" />
-    <GoTo />
+    <top />
+    <company-worktime :chartData="barData" />
+    <hour-distribution :chartData="pieData" />
+    <active-workplaces :workplaces="workplaces" />
+    <worktime :workers="workers" />
+    <go-to />
   </div>
 </template>

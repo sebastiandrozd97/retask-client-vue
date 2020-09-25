@@ -1,50 +1,167 @@
 [
   {
-    "name": "Styczeń",
-    "value": 120
+    "month": "Styczeń",
+    "value": 120,
+    "year": 2018
   },
   {
-    "name": "Luty",
-    "value": 140
+    "month": "Luty",
+    "value": 140,
+    "year": 2018
   },
   {
-    "name": "Marzec",
-    "value": 98
+    "month": "Marzec",
+    "value": 98,
+    "year": 2018
   },
   {
-    "name": "Kwiecień",
-    "value": 105
+    "month": "Kwiecień",
+    "value": 105,
+    "year": 2018
   },
   {
-    "name": "Maj",
-    "value": 107
+    "month": "Maj",
+    "value": 107,
+    "year": 2018
   },
   {
-    "name": "Czerwiec",
-    "value": 180
+    "month": "Czerwiec",
+    "value": 180,
+    "year": 2018
   },
   {
-    "name": "Lipiec",
-    "value": 210
+    "month": "Lipiec",
+    "value": 210,
+    "year": 2018
   },
   {
-    "name": "Sierpień",
-    "value": 220
+    "month": "Sierpień",
+    "value": 220,
+    "year": 2018
   },
   {
-    "name": "Wrzesień",
-    "value": 150
+    "month": "Wrzesień",
+    "value": 150,
+    "year": 2018
   },
   {
-    "name": "Październik",
-    "value": 80
+    "month": "Październik",
+    "value": 80,
+    "year": 2018
   },
   {
-    "name": "Listopad",
-    "value": 110
+    "month": "Listopad",
+    "value": 110,
+    "year": 2018
   },
   {
-    "name": "Grudzień",
-    "value": 109
+    "month": "Grudzień",
+    "value": 109,
+    "year": 2018
+  },
+  {
+    "month": "Styczeń",
+    "value": 120,
+    "year": 2019
+  },
+  {
+    "month": "Luty",
+    "value": 140,
+    "year": 2019
+  },
+  {
+    "month": "Marzec",
+    "value": 98,
+    "year": 2019
+  },
+  {
+    "month": "Kwiecień",
+    "value": 105,
+    "year": 2019
+  },
+  {
+    "month": "Maj",
+    "value": 107,
+    "year": 2019
+  },
+  {
+    "month": "Czerwiec",
+    "value": 180,
+    "year": 2019
+  },
+  {
+    "month": "Lipiec",
+    "value": 210,
+    "year": 2019
+  },
+  {
+    "month": "Sierpień",
+    "value": 220,
+    "year": 2019
+  },
+  {
+    "month": "Wrzesień",
+    "value": 150,
+    "year": 2019
+  },
+  {
+    "month": "Październik",
+    "value": 80,
+    "year": 2019
+  },
+  {
+    "month": "Listopad",
+    "value": 110,
+    "year": 2019
+  },
+  {
+    "month": "Grudzień",
+    "value": 109,
+    "year": 2019
+  },
+  {
+    "month": "Styczeń",
+    "value": 120,
+    "year": 2020
+  },
+  {
+    "month": "Luty",
+    "value": 140,
+    "year": 2020
+  },
+  {
+    "month": "Marzec",
+    "value": 98,
+    "year": 2020
+  },
+  {
+    "month": "Kwiecień",
+    "value": 105,
+    "year": 2020
+  },
+  {
+    "month": "Maj",
+    "value": 107,
+    "year": 2020
+  },
+  {
+    "month": "Czerwiec",
+    "value": 180,
+    "year": 2020
+  },
+  {
+    "month": "Lipiec",
+    "value": 210,
+    "year": 2020
+  },
+  {
+    "month": "Sierpień",
+    "value": 220,
+    "year": 2020
+  },
+  {
+    "month": "Wrzesień",
+    "value": 150,
+    "year": 2020
   }
 ]

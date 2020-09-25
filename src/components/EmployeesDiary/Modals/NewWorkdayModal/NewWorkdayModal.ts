@@ -24,7 +24,7 @@ export default class NewWorkdayModal extends Vue {
     // implement better solution
 
     const timeInterval = 15;
-    const times = [];
+    const times: string[] = [];
     let initialTime = 0;
 
     for (let i = 0; initialTime < 24 * 60; i++) {
