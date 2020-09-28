@@ -1,0 +1,55 @@
+.add-item-button {
+  top: 50px;
+  right: 90px;
+  border: 1px solid #0063f7;
+  padding: 5px 10px;
+}
+
+.modal-background {
+  z-index: 1;
+
+  .modal {
+    max-height: 650px;
+    overflow: auto;
+
+    .modal-form {
+      .form-element {
+        .modal-input {
+          height: 25px;
+        }
+
+        .modal-select {
+          border: none;
+          box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.1);
+          background-color: #f4f5f7;
+          height: 25px;
+        }
+
+        .modal-textarea {
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          outline: inherit;
+          overflow: hidden;
+
+          &:focus {
+            transition: border-bottom-color 0.5s ease;
+            border-bottom-color: #0063f7;
+          }
+        }
+      }
+
+      .row-display {
+        flex-direction: row;
+        align-items: center;
+
+        *:first-child {
+          width: 40%;
+        }
+
+        *:last-child {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

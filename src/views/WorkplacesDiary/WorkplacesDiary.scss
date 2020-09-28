@@ -3,23 +3,19 @@
     .header {
       width: calc(100% - 170px);
       display: grid;
-      grid-template-columns: 0.3fr 1fr 1fr 1.5fr 3.5fr;
+      grid-template-columns: 0.3fr 1.5fr 1fr 1fr 3fr;
       justify-content: left;
 
       span {
-        margin: 0 20px;
-        width: 100%;
+        margin: 0;
+        text-align: center;
 
-        &:nth-last-of-type(n + 3) {
-          text-align: center;
-        }
-
-        &:nth-last-of-type(-n + 2) {
+        &:nth-child(2) {
           text-align: left;
+          padding-left: 20px;
         }
 
-        @media only screen and (min-width: 1024px) {
-          margin: 0;
+        &:last-child {
           text-align: left;
         }
       }

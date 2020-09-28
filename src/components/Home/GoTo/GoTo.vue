@@ -6,7 +6,7 @@
     <div class="content">
       <router-link to="/employees">
         <button>
-          Przejdź do budów
+          Przejdź do pracowników
         </button>
       </router-link>
       <router-link to="/workplaces">

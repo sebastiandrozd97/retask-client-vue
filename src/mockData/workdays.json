@@ -2,6 +2,7 @@
   [
     {
       "id": 1,
+      "employee": "Dariusz Szpachlowy",
       "date": "2020-06-01",
       "workingFrom": "08:00",
       "workingTo": "16:00",
@@ -14,6 +15,7 @@
   [
     {
       "id": 2,
+      "employee": "Mateusz Miotłowy",
       "date": "2020-06-02",
       "workingFrom": "08:00",
       "workingTo": "12:00",
@@ -24,6 +26,7 @@
     },
     {
       "id": 3,
+      "employee": "Krystian Malowniczy",
       "date": "2020-06-02",
       "workingFrom": "12:00",
       "workingTo": "16:00",
@@ -36,6 +39,7 @@
   [
     {
       "id": 4,
+      "employee": "Damian Regipsowy",
       "date": "2020-06-04",
       "workingFrom": "08:00",
       "workingTo": "16:00",
@@ -48,6 +52,7 @@
   [
     {
       "id": 5,
+      "employee": "Artur Płytkowy",
       "date": "2020-06-05",
       "workingFrom": "08:00",
       "workingTo": "16:00",

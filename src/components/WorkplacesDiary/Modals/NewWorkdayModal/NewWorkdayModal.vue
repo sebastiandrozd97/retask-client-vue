@@ -38,12 +38,12 @@
             />
           </div>
           <div class="form-element row-display">
-            <label class="modal-label" for="workplace">Budowa</label>
-            <select class="modal-select" v-model="newWork.workplace" name="workplace" required>
-              <option value="">Wybierz budowę</option>
-              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.name">{{
-                workplace.name
-              }}</option>
+            <label class="modal-label" for="employee">Pracownik</label>
+            <select class="modal-select" v-model="newWork.workplace" name="employee" required>
+              <option value="">Wybierz pracownika</option>
+              <option v-for="(employee, index) in employees" :key="index" :value="employee.id">
+                {{ employee.firstName }} {{ employee.lastName }}
+              </option>
             </select>
           </div>
           <div class="form-element">

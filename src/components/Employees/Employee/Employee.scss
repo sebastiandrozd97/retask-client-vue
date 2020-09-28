@@ -3,9 +3,14 @@
     flex-direction: row;
   }
 
+  a {
+    height: 100%;
+    padding: 20px 0 20px 20px;
+  }
+
   .employee-details {
     @media only screen and (min-width: 1024px) {
-      width: calc(100% - 120px);
+      width: calc(100% - 140px);
     }
 
     .item-details-wrap {
@@ -38,7 +43,7 @@
     width: 100px;
     display: flex;
     justify-content: space-between;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
 
     @media only screen and (min-width: 1024px) {
       position: absolute;

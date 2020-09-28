@@ -3,7 +3,7 @@
 
 <template>
   <div class="list-element-container">
-    <router-link class="employee-details" :to="{ name: 'Workplaces', params: { id: workplace.id } }">
+    <router-link class="employee-details" :to="{ name: 'WorkplacesDiary', params: { id: workplace.id } }">
       <div class="item-details-wrap">
         <div class="details-section name-section">
           <span>

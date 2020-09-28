@@ -13,6 +13,12 @@
         </div>
         <div class="details-section">
           <span>
+            Pracownik:
+          </span>
+          <span>{{ work.employee }}</span>
+        </div>
+        <div class="details-section">
+          <span>
             Czas pracy:
           </span>
           <span> {{ work.workingFrom }} - {{ work.workingTo }} </span>
@@ -22,12 +28,6 @@
             Liczba godzin:
           </span>
           <span> {{ work.worktime }} h </span>
-        </div>
-        <div class="details-section">
-          <span>
-            Budowa:
-          </span>
-          <span>{{ work.workplace }}</span>
         </div>
         <div class="details-section">
           <span>

@@ -1,0 +1,48 @@
+.add-item-button {
+  right: 20px;
+}
+
+.filter-modal-background {
+  z-index: 1;
+
+  .modal {
+    overflow: auto;
+    width: 90vw;
+
+    @media only screen and (min-width: 1024px) {
+      width: 400px;
+    }
+
+    .modal-form {
+      margin-top: 30px;
+
+      .form-element {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        .modal-label {
+          font-size: 12px;
+          text-align: left;
+          margin-bottom: 3px;
+        }
+
+        .modal-select {
+          border: none;
+          box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.1);
+          background-color: #f4f5f7;
+          height: 25px;
+        }
+      }
+
+      .form-buttons {
+        text-align: right;
+
+        .submit-button {
+          margin-left: 10px;
+          background-color: #0068ff;
+        }
+      }
+    }
+  }
+}
