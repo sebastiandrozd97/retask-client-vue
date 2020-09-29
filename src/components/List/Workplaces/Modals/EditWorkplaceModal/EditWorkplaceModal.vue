@@ -42,7 +42,9 @@
           <div class="form-element">
             <label class="modal-label" for="client">Klient</label>
             <select class="modal-select" v-model="workplace.client" name="client" required>
-              <option v-for="(client, index) in clients" :key="index" :value="client">{{ client }}</option>
+              <option v-for="(client, index) in clients" :key="index" :value="client.firstName + ' ' + client.lastName"
+                >{{ client.firstName }} {{ client.lastName }}</option
+              >
             </select>
           </div>
           <div class="form-element">

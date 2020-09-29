@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
-import Workplace from '@/components/Workplaces/Workplace/Workplace.vue';
-import NewWorkplaceModal from '@/components/Workplaces/Modals/NewWorkplaceModal/NewWorkplaceModal.vue';
+import Workplace from '@/components/List/Workplaces/Workplace/Workplace.vue';
+import NewWorkplaceModal from '@/components/List/Workplaces/Modals/NewWorkplaceModal/NewWorkplaceModal.vue';
 import workplaces from '@/mockData/workplaces.json';
 import { Workplace as ConstructionSite } from '@/models/Workplace';
 

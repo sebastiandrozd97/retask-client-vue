@@ -1,6 +1,6 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import EditWorkdayModal from '@/components/WorkplacesDiary/Modals/EditWorkdayModal/EditWorkdayModal.vue';
-import DeleteWorkdayModal from '@/components/WorkplacesDiary/Modals/DeleteWorkdayModal/DeleteWorkdayModal.vue';
+import EditWorkdayModal from '@/components/Diaries/WorkplacesDiary/Modals/EditWorkdayModal/EditWorkdayModal.vue';
+import DeleteWorkdayModal from '@/components/Diaries/WorkplacesDiary/Modals/DeleteWorkdayModal/DeleteWorkdayModal.vue';
 import { Workday as WorkdayModel } from '@/models/Workday';
 import moment from 'moment';
 

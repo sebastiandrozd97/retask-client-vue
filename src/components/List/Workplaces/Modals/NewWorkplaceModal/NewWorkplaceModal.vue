@@ -3,7 +3,7 @@
 
 <template>
   <div class="new-employee-modal-container">
-    <button class="add-item-button" @click="isModalClosed = !isModalClosed">Dodaj pracownika</button>
+    <button class="add-item-button" @click="isModalClosed = !isModalClosed">Dodaj budowę</button>
     <div class="modal-background new-modal-background" :class="{ 'closed-modal': isModalClosed }">
       <div class="modal">
         <span class="modal-title">Dodaj nową budowę</span>
@@ -29,7 +29,7 @@
             />
           </div>
           <div class="form-element">
-            <label class="modal-label" for="street">Ulica</label>
+            <label class="modal-label" for="street">Adres</label>
             <input
               class="modal-input"
               type="text"
@@ -42,7 +42,9 @@
             <label class="modal-label" for="client">Klient</label>
             <select class="modal-select" v-model="newWorkpalce.client" name="client" required>
               <option>Wybierz klienta</option>
-              <option v-for="(client, index) in clients" :key="index" :value="client">{{ client }}</option>
+              <option v-for="(client, index) in clients" :key="index" :value="client.firstName + ' ' + client.lastName"
+                >{{ client.firstName }} {{ client.lastName }}</option
+              >
             </select>
           </div>
           <div class="form-buttons">

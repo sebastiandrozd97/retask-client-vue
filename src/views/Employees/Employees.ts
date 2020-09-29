@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
-import Employee from '@/components/Employees/Employee/Employee.vue';
-import NewEmployeeModal from '@/components/Employees/Modals/NewEmployeeModal/NewEmployeeModal.vue';
+import Employee from '@/components/List/Employees/Employee/Employee.vue';
+import NewEmployeeModal from '@/components/List/Employees/Modals/NewEmployeeModal/NewEmployeeModal.vue';
 import workers from '@/mockData/workers.json';
 import { Worker } from '@/models/Worker';
 

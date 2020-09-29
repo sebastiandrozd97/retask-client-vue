@@ -1,1 +1,38 @@
-["Thomas Koch", "Thomas Traar", "Paweł Paweł", "Thomas Olaf", "Thomas Jorg", "Thomas Pesch"]
+[
+  {
+    "id": 1,
+    "firstName": "Thomas",
+    "lastName": "Koch",
+    "telephoneNumber": "785223993"
+  },
+  {
+    "id": 2,
+    "firstName": "Thomas",
+    "lastName": "Traar",
+    "telephoneNumber": "785223993"
+  },
+  {
+    "id": 3,
+    "firstName": "Paweł",
+    "lastName": "Paweł",
+    "telephoneNumber": "785223993"
+  },
+  {
+    "id": 4,
+    "firstName": "Thomas",
+    "lastName": "Olaf",
+    "telephoneNumber": "785223993"
+  },
+  {
+    "id": 5,
+    "firstName": "Thomas",
+    "lastName": "Jorg",
+    "telephoneNumber": "785223993"
+  },
+  {
+    "id": 6,
+    "firstName": "Thomas",
+    "lastName": "Pesch",
+    "telephoneNumber": "785223993"
+  }
+]
