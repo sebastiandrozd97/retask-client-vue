@@ -16,11 +16,6 @@
       "icon": "user-tie"
     },
     {
-      "label": "Powiadomienia",
-      "route": "/notifications",
-      "icon": "bell"
-    },
-    {
       "label": "Ustawienia",
       "route": "/settings",
       "icon": "cog"

@@ -1,0 +1,145 @@
+@import '@/components/Navbar/Navbar/Navbar';
+
+.notifications-container {
+  position: relative;
+
+  .notification-number {
+    position: absolute;
+    text-align: center;
+    top: -7px;
+    right: 3px;
+    font-size: 0.7em;
+    background-color: #ff3333;
+    color: white;
+    min-width: 17px;
+    height: 17px;
+    line-height: 17px;
+    border-radius: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    cursor: default;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .notifications-box {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px 20px 30px 20px;
+
+    &.open {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      margin-top: 40px;
+      height: calc(100vh - 80px);
+      width: 400px;
+      box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 20px 20px 15px 20px;
+
+      &.open {
+        transform: translateX(0%);
+        left: 80px;
+      }
+
+      .notification-icon {
+        display: none;
+      }
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      .notifications-content-title {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+    }
+
+    .notifications-content {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: calc(100vh - 80px);
+      -webkit-overflow-scrolling: touch;
+
+      .notifications-content-item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 7px;
+        font-size: 0.9em;
+        padding: 5px 10px;
+        margin: 5px 5px 0 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .notification-name {
+          font-weight: 600;
+          font-size: 1.2em;
+        }
+
+        .notification-date {
+          font-weight: 300;
+          font-size: 0.8em;
+        }
+      }
+
+      .seen {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      @media only screen and (min-width: 1024px) {
+        height: 90%;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #f5f5f5;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        &:active {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 10px;
+
+      a {
+        color: #0068ff;
+      }
+    }
+  }
+}

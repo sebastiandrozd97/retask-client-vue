@@ -19,7 +19,8 @@ import {
   faBell,
   faSignOutAlt,
   faExclamationTriangle,
-  faAngleDown
+  faAngleDown,
+  faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt, faEdit } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -34,7 +35,8 @@ library.add(
   faTrashAlt,
   faEdit,
   faExclamationTriangle,
-  faAngleDown
+  faAngleDown,
+  faChevronLeft
 );
 
 Vue.component('fa-icon', FontAwesomeIcon);

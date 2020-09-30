@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Maciek",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Artur",
+    "content": "Edycja danych",
+    "isSeen": true,
+    "date": "30.09.2020 17:51"
+  },
+  {
+    "name": "Artur",
+    "content": "Edycja danych",
+    "isSeen": true,
+    "date": "30.09.2020 12:51"
+  },
+  {
+    "name": "Paweł",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": true,
+    "date": "29.09.2020 15:31"
+  },
+  {
+    "name": "Jan",
+    "content": "Edycja danych",
+    "isSeen": false,
+    "date": "28.09.2020 15:31"
+  },
+  {
+    "name": "Krystian",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": true,
+    "date": "28.09.2020 15:31"
+  },
+  {
+    "name": "Krystian",
+    "content": "Edycja danych",
+    "isSeen": false,
+    "date": "27.09.2020 15:31"
+  },
+  {
+    "name": "Maciek",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Krystian",
+    "content": "Edycja danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Maciek",
+    "content": "Edycja danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Michał",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Artur",
+    "content": "Usunięcie danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Krystian",
+    "content": "Edycja danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Maciek",
+    "content": "Edycja danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Michał",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Artur",
+    "content": "Usunięcie danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Krystian",
+    "content": "Edycja danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Maciek",
+    "content": "Edycja danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Michał",
+    "content": "Wprowadzenie nowych danych",
+    "isSeen": false,
+    "date": "17.09.2020 15:31"
+  },
+  {
+    "name": "Artur",
+    "content": "Usunięcie danych",
+    "isSeen": true,
+    "date": "17.09.2020 15:31"
+  }
+]

@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import Navbar from '@/components/Navbar/Navbar.vue';
+import Navbar from '@/components/Navbar/Navbar/Navbar.vue';
 
 @Component({
   components: {
