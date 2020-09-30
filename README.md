@@ -1,5 +1,11 @@
 # remember-client
 
+
+## Netlify
+```
+https://suspicious-pare-4c47b5.netlify.app/
+```
+
 ## Project setup
 ```
 npm install
