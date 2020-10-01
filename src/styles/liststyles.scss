@@ -1,7 +1,4 @@
 .list-container {
-  width: 90%;
-  margin: auto;
-
   .top {
     display: flex;
     flex-direction: column;
@@ -22,6 +19,7 @@
     position: absolute;
     top: 90px;
     width: 90%;
+    left: 5%;
 
     @media only screen and (min-width: 1024px) {
       margin-left: 30px;
@@ -29,7 +27,7 @@
 
     .header {
       position: absolute;
-      top: -100%;
+      display: none;
       padding: 20px;
       font-size: 14px;
       font-weight: 900;
@@ -40,6 +38,7 @@
 
       @media only screen and (min-width: 1024px) {
         position: static;
+        display: flex;
       }
     }
   }

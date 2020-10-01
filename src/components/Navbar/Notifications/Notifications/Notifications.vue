@@ -9,7 +9,9 @@
         icon="bell"
         @click="isNotificationBoxOpen = !isNotificationBoxOpen"
       />
-      <span class="notification-number noselect">{{ unseenNotifications }}</span>
+      <span class="notification-number noselect" @click="isNotificationBoxOpen = !isNotificationBoxOpen">{{
+        unseenNotifications
+      }}</span>
       <div class="notifications-box" :class="{ open: isNotificationBoxOpen }">
         <div class="top noselect">
           <fa-icon
@@ -20,12 +22,7 @@
           <span class="notifications-content-title">Powiadomienia</span>
         </div>
         <div class="notifications-content">
-          <div v-for="(notification, index) in notifications" :key="index" class="notifications-content-item">
-            <span class="notification-name" :class="{ seen: notification.isSeen }">{{ notification.name }}</span>
-            <span>{{ notification.content }}</span>
-            <span class="notification-date">{{ getNotificationDate(notification.date) }}</span>
-          </div>
-          <!-- <notification v-for="(notification, index) in notifications" :key="index" :notification="notification" /> -->
+          <notification v-for="(notification, index) in notifications" :key="index" :notification="notification" />
         </div>
         <div class="bottom">
           <router-link
@@ -38,6 +35,6 @@
         </div>
       </div>
     </div>
-    <span class="menu-text">Powiadomienia</span>
+    <span class="menu-text" @click="isNotificationBoxOpen = !isNotificationBoxOpen">Powiadomienia</span>
   </div>
 </template>

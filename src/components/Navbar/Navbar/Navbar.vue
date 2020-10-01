@@ -14,28 +14,28 @@
         </button>
         <div class="nav">
           <div class="router-links">
-            <router-link class="nav-item-link logo-link" to="/">
-              <img class="nav-img logo" src="@/assets/img/Logo.svg" />
-            </router-link>
-            <router-link @click.native="isMenuOpen = !isMenuOpen" class="nav-item-link home-button" to="/">
-              ReMember
-            </router-link>
-            <router-link
-              @click.native="isMenuOpen = !isMenuOpen"
-              v-for="(route, index) in routes"
-              :key="index"
-              class="nav-item-link"
-              :to="route.route"
-            >
-              <div class="img-container">
-                <fa-icon class="nav-icon fa-lg" :icon="route.icon" />
-              </div>
-              <span class="menu-text">{{ route.label }}</span>
-            </router-link>
-            <notifications />
-          </div>
-          <div class="logout-button">
-            <router-link class="nav-item-link" to="/auth">
+            <div>
+              <router-link class="nav-item-link logo-link" to="/">
+                <img class="nav-img logo" src="@/assets/img/Logo.svg" />
+              </router-link>
+              <router-link @click.native="isMenuOpen = !isMenuOpen" class="nav-item-link home-button" to="/">
+                ReMember
+              </router-link>
+              <router-link
+                @click.native="isMenuOpen = !isMenuOpen"
+                v-for="(route, index) in routes"
+                :key="index"
+                class="nav-item-link"
+                :to="route.route"
+              >
+                <div class="img-container">
+                  <fa-icon class="nav-icon fa-lg" :icon="route.icon" />
+                </div>
+                <span class="menu-text">{{ route.label }}</span>
+              </router-link>
+              <notifications />
+            </div>
+            <router-link class="nav-item-link logout-button" to="/auth">
               <fa-icon class="nav-icon fa-lg" icon="sign-out-alt" />
               <span class="menu-text">Wyloguj się</span>
             </router-link>

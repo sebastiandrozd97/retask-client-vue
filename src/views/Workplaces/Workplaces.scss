@@ -2,7 +2,6 @@
   .employees-list {
     .header {
       width: calc(100% - 150px);
-      display: flex;
       justify-content: space-between;
       align-items: center;
 
@@ -25,8 +24,7 @@
     }
 
     .new-workplace {
-      position: absolute;
-      top: -100%;
+      display: none;
       width: 100%;
       border: 2.5px dotted #0063f7;
       padding: 20px;
@@ -41,7 +39,7 @@
       }
 
       @media only screen and (min-width: 1024px) {
-        position: static;
+        display: block;
       }
     }
   }

@@ -25,7 +25,7 @@ $mobile-active: 'mobile-active';
   left: -100%;
   opacity: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   z-index: 1;
 
@@ -76,9 +76,7 @@ $mobile-active: 'mobile-active';
       position: absolute;
       top: 0px;
       height: 100%;
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
       margin-left: 50px;
       font-size: 14px;
 
@@ -94,7 +92,8 @@ $mobile-active: 'mobile-active';
         flex-direction: column;
 
         @media only screen and (min-width: 1024px) {
-          display: flex;
+          height: 100%;
+          justify-content: space-between;
           align-items: center;
         }
       }
@@ -141,6 +140,12 @@ $mobile-active: 'mobile-active';
               color: #fff;
             }
           }
+        }
+      }
+
+      .logout-button {
+        @media only screen and (max-width: 1023px) {
+          margin-top: 50px;
         }
       }
 
