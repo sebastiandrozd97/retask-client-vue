@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import notifications from '@/mockData/notifications.json';
+import notificationsRaw from '@/mockData/notifications.json';
 import { Notification as NotificationModel } from '@/models/Notification';
 import Notification from '@/components/Navbar/Notifications/Notification/Notification.vue';
 import moment from 'moment';
@@ -11,13 +11,10 @@ import moment from 'moment';
 })
 export default class Notifications extends Vue {
   private isNotificationBoxOpen = false;
+  private notifications: NotificationModel[] = notificationsRaw;
 
   private get unseenNotifications(): number {
-    return notifications.map(obj => obj.isSeen).filter(notification => !notification).length;
-  }
-
-  private get notifications(): NotificationModel[] {
-    return notifications;
+    return this.notifications.filter(notification => !notification.isSeen).length;
   }
 
   private getNotificationDate(date: string): string {

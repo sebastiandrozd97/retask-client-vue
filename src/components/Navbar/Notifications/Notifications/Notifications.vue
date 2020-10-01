@@ -20,12 +20,7 @@
           <span class="notifications-content-title">Powiadomienia</span>
         </div>
         <div class="notifications-content">
-          <div v-for="(notification, index) in notifications" :key="index" class="notifications-content-item">
-            <span class="notification-name" :class="{ seen: notification.isSeen }">{{ notification.name }}</span>
-            <span>{{ notification.content }}</span>
-            <span class="notification-date">{{ getNotificationDate(notification.date) }}</span>
-          </div>
-          <!-- <notification v-for="(notification, index) in notifications" :key="index" :notification="notification" /> -->
+          <notification v-for="(notification, index) in notifications" :key="index" :notification="notification" />
         </div>
         <div class="bottom">
           <router-link
