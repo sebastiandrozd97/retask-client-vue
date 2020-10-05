@@ -16,7 +16,7 @@ export default class ActiveWorkplaces extends Vue {
   }
 
   private get maxPage() {
-    return this.workplaces.length / this.itemsPerPage;
+    return this.activeWorkplaces.length / this.itemsPerPage;
   }
 
   private get activeWorkplaces(): Workplace[] {
