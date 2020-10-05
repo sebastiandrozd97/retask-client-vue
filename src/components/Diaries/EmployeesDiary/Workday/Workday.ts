@@ -1,4 +1,5 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { PropType } from 'vue';
 import EditWorkdayModal from '@/components/Diaries/EmployeesDiary/Modals/EditWorkdayModal/EditWorkdayModal.vue';
 import DeleteWorkdayModal from '@/components/Diaries/EmployeesDiary/Modals/DeleteWorkdayModal/DeleteWorkdayModal.vue';
 import { Workday as WorkdayModel } from '@/models/Workday';
@@ -11,7 +12,11 @@ import moment from 'moment';
   }
 })
 export default class Workday extends Vue {
-  @Prop() readonly workday!: WorkdayModel[];
+  @Prop({
+    type: Array as PropType<WorkdayModel[]>,
+    required: true
+  })
+  readonly workday!: WorkdayModel[];
 
   get date() {
     if (this.workday) {

@@ -30,6 +30,6 @@ export default class FilterWorkdayModal extends Vue {
       return;
     }
 
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = 'visible';
   }
 }

@@ -22,7 +22,7 @@
                 ReMember
               </router-link>
               <router-link
-                @click.native="isMenuOpen = !isMenuOpen"
+                @click.native="isMenuOpen = false"
                 v-for="(route, index) in routes"
                 :key="index"
                 class="nav-item-link"

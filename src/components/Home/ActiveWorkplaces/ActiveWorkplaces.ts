@@ -1,9 +1,14 @@
 import { Workplace } from '@/models/Workplace';
+import { PropType } from 'vue';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ActiveWorkplaces extends Vue {
-  @Prop() readonly workplaces!: Workplace[];
+  @Prop({
+    type: Array as PropType<Workplace[]>,
+    required: true
+  })
+  readonly workplaces!: Workplace[];
   private page = 1;
   private itemsPerPage = 5;
 

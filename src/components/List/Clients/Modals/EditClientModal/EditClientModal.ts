@@ -1,9 +1,14 @@
 import { Client } from '@/models/Client';
+import { PropType } from 'vue';
 import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class EditClientModal extends Vue {
-  @Prop() client!: Client;
+  @Prop({
+    type: Object as PropType<Client>,
+    required: true
+  })
+  client!: Client;
 
   private isEditModalClosed = true;
 
@@ -14,6 +19,6 @@ export default class EditClientModal extends Vue {
       return;
     }
 
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = 'visible';
   }
 }

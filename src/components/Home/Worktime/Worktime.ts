@@ -1,9 +1,14 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
+import { PropType } from 'vue';
 import { Worker } from '@/models/Worker';
 
 @Component
 export default class Worktime extends Vue {
-  @Prop() readonly workers!: Worker[];
+  @Prop({
+    type: Array as PropType<Worker[]>,
+    required: true
+  })
+  readonly workers!: Worker[];
   @Ref() readonly listContainer!: HTMLDivElement;
 
   private page = 1;

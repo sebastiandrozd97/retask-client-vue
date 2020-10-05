@@ -2,7 +2,11 @@ import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class DeleteEmployeeModal extends Vue {
-  @Prop() readonly workId!: number;
+  @Prop({
+    type: Number,
+    required: true
+  })
+  readonly workId!: number;
 
   private isDeleteModalClosed = true;
 
@@ -17,6 +21,6 @@ export default class DeleteEmployeeModal extends Vue {
       return;
     }
 
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = 'visible';
   }
 }

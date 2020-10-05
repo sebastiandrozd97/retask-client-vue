@@ -1,10 +1,16 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
+import { PropType } from 'vue';
+
 import { Chart } from 'chart.js';
 import { BarChartData } from '@/models/BarChartData';
 
 @Component
 export default class CompanyWorktime extends Vue {
-  @Prop() readonly chartData!: BarChartData[];
+  @Prop({
+    type: Array as PropType<BarChartData[]>,
+    required: true
+  })
+  readonly chartData!: BarChartData[];
   @Ref() readonly chartCanvas!: HTMLCanvasElement;
 
   private allWorktimes = this.chartData.map(obj => obj.value);

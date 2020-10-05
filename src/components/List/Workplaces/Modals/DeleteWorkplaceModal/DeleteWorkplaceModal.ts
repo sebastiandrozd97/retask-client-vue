@@ -11,6 +11,6 @@ export default class DeleteEmployeeModal extends Vue {
       return;
     }
 
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = 'visible';
   }
 }

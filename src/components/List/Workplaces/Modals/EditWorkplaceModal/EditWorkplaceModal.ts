@@ -1,10 +1,15 @@
 import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
+import { PropType } from 'vue';
 import clients from '@/mockData/clients.json';
 import { Workplace } from '@/models/Workplace';
 
 @Component
 export default class EditWorkplaceModal extends Vue {
-  @Prop() private workplace!: Workplace;
+  @Prop({
+    type: Object as PropType<Workplace>,
+    required: true
+  })
+  private workplace!: Workplace;
 
   private get clients() {
     return clients;
@@ -19,6 +24,6 @@ export default class EditWorkplaceModal extends Vue {
       return;
     }
 
-    document.body.style.overflow = 'scroll';
+    document.body.style.overflow = 'visible';
   }
 }

@@ -1,11 +1,16 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
+import { PropType } from 'vue';
 import { Chart } from 'chart.js';
 import { PieChartData } from '@/models/PieChartData';
 import { colors } from '@/helpers/colors.ts';
 
 @Component
 export default class HourDistribution extends Vue {
-  @Prop() readonly chartData!: PieChartData[];
+  @Prop({
+    type: Array as PropType<PieChartData[]>,
+    required: true
+  })
+  readonly chartData!: PieChartData[];
   @Ref() readonly chartCanvas!: HTMLCanvasElement;
 
   private workplaces = this.chartData.map(obj => obj.name);
