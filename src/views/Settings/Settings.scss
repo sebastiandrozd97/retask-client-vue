@@ -8,9 +8,19 @@
     width: 400px;
   }
 
-  .title {
-    margin-bottom: 50px;
-    font-size: 25px;
+  .top {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 23px;
+    margin-bottom: 8px;
+
+    @media only screen and (min-width: 1024px) {
+      top: 30px;
+      right: auto;
+      left: calc(5% + 30px);
+      font-size: 1.6em;
+    }
   }
 
   .submit-button {
@@ -52,6 +62,14 @@
     .form-section {
       width: 100%;
       margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .form-label {
+        margin: 5px;
+        font-size: 0.8em;
+      }
 
       .form-input {
         background-color: white;
@@ -66,7 +84,7 @@
 
     .options-buttons {
       font-size: 12px;
-      margin-left: 10px;
+      padding: 5px;
       display: flex;
       align-content: center;
 
@@ -78,14 +96,6 @@
         outline: inherit;
         color: rgba(0, 99, 247, 0.6);
         font-weight: 600;
-
-        &:first-child {
-          margin-right: 4px;
-        }
-
-        &:last-child {
-          margin-left: 4px;
-        }
 
         &:hover,
         &:focus,
