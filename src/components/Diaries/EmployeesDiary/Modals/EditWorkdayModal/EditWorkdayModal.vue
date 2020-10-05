@@ -17,13 +17,13 @@
           <div class="form-element row-display">
             <label class="modal-label" for="working-hours-from">Praca od</label>
             <select class="modal-select" v-model="work.workingFrom" name="working-hours-from">
-              <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
+              <option v-for="(time, index) in times" :key="index" :value="time">{{ time }}</option>
             </select>
           </div>
           <div class="form-element row-display">
             <label class="modal-label" for="working-hours-to">Praca do</label>
             <select class="modal-select" v-model="work.workingTo" name="working-hours-to">
-              <option v-for="(time, index) in getTimes()" :key="index" :value="time">{{ time }}</option>
+              <option v-for="(time, index) in times" :key="index" :value="time">{{ time }}</option>
             </select>
           </div>
           <div class="form-element row-display">

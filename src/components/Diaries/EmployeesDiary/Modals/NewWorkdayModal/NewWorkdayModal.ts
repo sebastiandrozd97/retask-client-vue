@@ -1,6 +1,7 @@
 import workplaces from '@/mockData/workplaces.json';
 import { Workplace } from '@/models/Workplace';
 import { Component, Watch, Vue } from 'vue-property-decorator';
+import { times } from '@/utils/GetTimeRange';
 
 @Component
 export default class NewWorkdayModal extends Vue {
@@ -20,21 +21,8 @@ export default class NewWorkdayModal extends Vue {
     this.isModalClosed = !this.isModalClosed;
   }
 
-  getTimes() {
-    // implement better solution
-
-    const timeInterval = 15;
-    const times: string[] = [];
-    let initialTime = 0;
-
-    for (let i = 0; initialTime < 24 * 60; i++) {
-      const hours = Math.floor(initialTime / 60);
-      const minutes = initialTime % 60;
-      times[i] = ('0' + (hours % 24)).slice(-2) + ':' + ('0' + minutes).slice(-2);
-      initialTime = initialTime + timeInterval;
-    }
-
-    return times;
+  get times(): string[] {
+    return times();
   }
 
   addWork() {
