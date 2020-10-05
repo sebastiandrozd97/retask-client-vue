@@ -1,6 +1,6 @@
 import employees from '@/mockData/workers.json';
 import { Worker } from '@/models/Worker';
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class NewWorkdayModal extends Vue {
@@ -43,5 +43,15 @@ export default class NewWorkdayModal extends Vue {
 
   get employees(): Worker[] {
     return employees;
+  }
+
+  @Watch('isModalClosed')
+  onModalOpen(val: boolean) {
+    if (!val) {
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    document.body.style.overflow = 'scroll';
   }
 }

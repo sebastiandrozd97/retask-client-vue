@@ -1,6 +1,6 @@
 import workplaces from '@/mockData/workplaces.json';
 import { Workplace } from '@/models/Workplace';
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class NewWorkdayModal extends Vue {
@@ -43,5 +43,15 @@ export default class NewWorkdayModal extends Vue {
 
   get workplaces(): Workplace[] {
     return workplaces;
+  }
+
+  @Watch('isModalClosed')
+  onModalOpen(val: boolean) {
+    if (!val) {
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    document.body.style.overflow = 'scroll';
   }
 }

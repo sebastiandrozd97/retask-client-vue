@@ -1,6 +1,6 @@
 import years from '@/mockData/years.json';
 import { months } from '@/helpers/months';
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 import { Month } from '@/models/Month';
 
 @Component
@@ -21,5 +21,15 @@ export default class FilterWorkdayModal extends Vue {
 
   filterWorks() {
     // TODO: finish function
+  }
+
+  @Watch('isFilterModalClosed')
+  onModalOpen(val: boolean) {
+    if (!val) {
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    document.body.style.overflow = 'scroll';
   }
 }

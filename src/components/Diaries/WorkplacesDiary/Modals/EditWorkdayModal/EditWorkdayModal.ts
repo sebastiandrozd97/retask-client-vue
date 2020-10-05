@@ -1,6 +1,6 @@
 import { Workday as WorkdayModel } from '@/models/Workday';
 import employees from '@/mockData/workers.json';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 import { Worker } from '@/models/Worker';
 
 @Component
@@ -32,5 +32,15 @@ export default class EditWorkdayModal extends Vue {
 
   get employees(): Worker[] {
     return employees;
+  }
+
+  @Watch('isEditModalClosed')
+  onModalOpen(val: boolean) {
+    if (!val) {
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    document.body.style.overflow = 'scroll';
   }
 }

@@ -1,6 +1,16 @@
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class DeleteEmployeeModal extends Vue {
   private isDeleteModalClosed = true;
+
+  @Watch('isDeleteModalClosed')
+  onModalOpen(val: boolean) {
+    if (!val) {
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
+    document.body.style.overflow = 'scroll';
+  }
 }
