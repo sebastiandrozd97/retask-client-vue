@@ -1,0 +1,40 @@
+.list-element-container {
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  .item-details-wrap {
+    padding: 20px;
+
+    .details-section {
+      @media only screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 20px;
+
+        &:first-child {
+          width: 15%;
+        }
+
+        &:nth-child(2) {
+          width: 25%;
+        }
+
+        &:nth-child(3) {
+          width: 60%;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .seen {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}

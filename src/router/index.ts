@@ -4,6 +4,7 @@ import Home from '@/views/Home/Home.vue';
 import Employees from '@/views/Employees/Employees.vue';
 import Clients from '@/views/Clients/Clients.vue';
 import Workplaces from '@/views/Workplaces/Workplaces.vue';
+import Notifications from '@/views/Notifications/Notifications.vue';
 import EmployeesDiary from '@/views/EmployeesDiary/EmployeesDiary.vue';
 import WorkplacesDiary from '@/views/WorkplacesDiary/WorkplacesDiary.vue';
 import Auth from '@/views/Auth/Auth.vue';
@@ -40,6 +41,11 @@ const routes: Array<RouteConfig> = [
     path: '/clients',
     name: 'Clients',
     component: Clients
+  },
+  {
+    path: '/notifications',
+    name: 'Notifications',
+    component: Notifications
   },
   {
     path: '/auth',

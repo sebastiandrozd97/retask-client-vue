@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    &:first-child {
+      width: 15%;
+    }
+
+    &:nth-child(2) {
+      width: 25%;
+    }
+
+    &:last-child {
+      width: 60%;
+    }
+  }
+}
