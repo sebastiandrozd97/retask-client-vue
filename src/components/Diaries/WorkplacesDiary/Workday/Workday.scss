@@ -113,11 +113,17 @@
         padding: 20px;
         width: max-content;
         max-width: 150px;
+        max-height: 230px;
         border-radius: 8px;
         text-align: left;
         background-color: #0063f7;
         color: white;
         content: attr(tooltip-data);
+
+        @media only screen and (min-width: 1024px) {
+          max-width: 300px;
+          max-height: 120px;
+        }
       }
 
       &::after {
