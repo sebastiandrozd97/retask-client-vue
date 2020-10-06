@@ -5,8 +5,12 @@
     <button class="modalOpenButton" @click="isDeleteModalClosed = !isDeleteModalClosed">
       <fa-icon class="employee-icon far fa-2x" :icon="['far', 'trash-alt']" />
     </button>
-    <div class="modal-background delete-modal-background" :class="{ 'closed-modal': isDeleteModalClosed }">
-      <div class="modal">
+    <div
+      @click="isDeleteModalClosed = true"
+      class="modal-background delete-modal-background"
+      :class="{ 'closed-modal': isDeleteModalClosed }"
+    >
+      <div class="modal" @click.stop>
         <span class="modal-title">Usunąć wykonaną pracę?</span>
         <div class="form-buttons">
           <button @click="isDeleteModalClosed = !isDeleteModalClosed" class="cancel-button">Anuluj</button>

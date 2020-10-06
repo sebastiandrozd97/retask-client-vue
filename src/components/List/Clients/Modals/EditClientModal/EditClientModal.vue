@@ -5,8 +5,12 @@
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
       <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
     </button>
-    <div class="modal-background edit-modal-background" :class="{ 'closed-modal': isEditModalClosed }">
-      <div class="modal">
+    <div
+      @click="isEditModalClosed = true"
+      class="modal-background edit-modal-background"
+      :class="{ 'closed-modal': isEditModalClosed }"
+    >
+      <div class="modal" @click.stop>
         <span class="modal-title">Edytuj dane klienta</span>
         <form class="modal-form">
           <div class="form-element">

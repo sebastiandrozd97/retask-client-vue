@@ -4,8 +4,12 @@
 <template>
   <div class="new-workday-modal-container">
     <button class="add-item-button" @click="changeModalState()">Filtruj</button>
-    <div class="modal-background filter-modal-background" :class="{ 'closed-modal': isFilterModalClosed }">
-      <div class="modal">
+    <div
+      @click="isFilterModalClosed = true"
+      class="modal-background filter-modal-background"
+      :class="{ 'closed-modal': isFilterModalClosed }"
+    >
+      <div class="modal" @click.stop>
         <span class="modal-title">Wyszukiwanie</span>
         <form class="modal-form">
           <div class="form-element">

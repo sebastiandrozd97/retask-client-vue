@@ -4,8 +4,12 @@
 <template>
   <div class="new-workday-modal-container">
     <button class="add-item-button" @click="changeModalState()">Dodaj</button>
-    <div class="modal-background new-modal-background" :class="{ 'closed-modal': isModalClosed }">
-      <div class="modal">
+    <div
+      @click="isModalClosed = true"
+      class="modal-background new-modal-background"
+      :class="{ 'closed-modal': isModalClosed }"
+    >
+      <div class="modal" @click.stop>
         <span class="modal-title">Edycja dnia pracy</span>
         <form class="modal-form">
           <div class="form-element row-display">

@@ -4,8 +4,12 @@
 <template>
   <div class="new-employee-modal-container">
     <button class="add-item-button" @click="isModalClosed = !isModalClosed">Dodaj klienta</button>
-    <div class="modal-background new-modal-background" :class="{ 'closed-modal': isModalClosed }">
-      <div class="modal">
+    <div
+      @click="isModalClosed = true"
+      class="modal-background new-modal-background"
+      :class="{ 'closed-modal': isModalClosed }"
+    >
+      <div class="modal" @click.stop>
         <span class="modal-title">Dodaj nowego klienta</span>
         <form class="modal-form">
           <div class="form-element">
