@@ -1,8 +1,12 @@
 import { Component, Prop, Vue, Ref } from 'vue-property-decorator';
 import { PropType } from 'vue';
-
 import { Chart } from 'chart.js';
 import { BarChartData } from '@/models/BarChartData';
+
+export enum ChartType {
+  MONTHLY,
+  YEARLY
+}
 
 @Component
 export default class CompanyWorktime extends Vue {
@@ -11,21 +15,25 @@ export default class CompanyWorktime extends Vue {
     required: true
   })
   readonly chartData!: BarChartData[];
+
   @Ref() readonly chartCanvas!: HTMLCanvasElement;
 
+  private chartTypes = ChartType;
   private allWorktimes = this.chartData.map(obj => obj.value);
-  private isMonthly = true;
+  private chartType = this.chartTypes.MONTHLY;
   private labels: string[] | number[] = [];
   private values: number[] = [];
+  private chart: Chart | null = null;
 
-  private get chart() {
+  private initChart() {
     const chartContext = this.chartCanvas.getContext('2d');
 
     if (!chartContext || !this.chartData) {
-      return null;
+      this.chart = null;
+      return;
     }
 
-    return new Chart(chartContext, {
+    this.chart = new Chart(chartContext, {
       type: 'horizontalBar',
       data: {
         labels: this.labels,
@@ -73,14 +81,15 @@ export default class CompanyWorktime extends Vue {
   }
 
   private setMonthly() {
-    this.isMonthly = true;
+    this.chartType = this.chartTypes.MONTHLY;
     this.labels = this.chartData.map(obj => obj.month).slice(-12);
     this.values = this.allWorktimes.slice(-12);
-    this.chart;
+    this.chart?.destroy();
+    this.initChart();
   }
 
   private setYearly() {
-    this.isMonthly = false;
+    this.chartType = this.chartTypes.YEARLY;
     this.labels = [...new Set(this.chartData.map(obj => obj.year))];
     this.values = [];
     this.labels.forEach(year => {
@@ -91,7 +100,8 @@ export default class CompanyWorktime extends Vue {
           .reduce((a, b) => a + b, 0)
       );
     });
-    this.chart;
+    this.chart?.destroy();
+    this.initChart();
   }
 
   mounted() {
