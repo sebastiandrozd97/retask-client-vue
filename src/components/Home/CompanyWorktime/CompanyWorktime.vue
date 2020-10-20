@@ -5,13 +5,21 @@
   <div class="dashboard-section-container">
     <div class="company-worktime-header">
       <div class="dashboard-title">Wykaz liczby godzin</div>
-      <div class="data-type-toggle">
-        <button class="toggle-button" :class="{ active: chartType === chartTypes.MONTHLY }" @click="setMonthly()">
-          Miesięczny
-        </button>
-        <button class="toggle-button" :class="{ active: chartType === chartTypes.YEARLY }" @click="setYearly()">
-          Roczny
-        </button>
+      <div class="data-type-toggle noselect">
+        <input
+          type="button"
+          class="toggle-button"
+          :class="{ active: chartType === chartTypes.MONTHLY }"
+          @click="setMonthly()"
+          value="Miesięczny"
+        />
+        <input
+          type="button"
+          class="toggle-button"
+          :class="{ active: chartType === chartTypes.YEARLY }"
+          @click="setYearly()"
+          value="Roczny"
+        />
       </div>
     </div>
     <div class="chart-container">

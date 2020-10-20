@@ -7,6 +7,15 @@
     justify-content: space-between;
     width: 100%;
 
+    .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
     .data-type-toggle {
       padding: 0 15px;
       margin-top: 10px;
@@ -16,10 +25,12 @@
         padding: 0px 5px;
         height: 25px;
         border: 2px solid #0063f7;
-        outline: inherit;
-        background: transparent;
+        outline: none;
+        box-sizing: border-box;
+        background: #fff;
         border-radius: 5px;
         color: #0063f7;
+        -webkit-appearance: none;
 
         &:first-child {
           border-right: none;
