@@ -3,7 +3,7 @@
 <template>
   <div class="new-employee-modal-container">
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
-      <fa-icon class="employee-icon far fa-2x" :icon="['far', 'edit']" />
+      <fa-icon class="employee-icon far fa-2x" :icon="['fas', 'edit']" />
     </button>
     <div
       @click="isEditModalClosed = true"

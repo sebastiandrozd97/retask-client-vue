@@ -29,7 +29,7 @@
         <button @click.prevent="form = 'register'">Zarejestruj się</button> lub
         <button @click.prevent="form = 'remind'">przypomnij sobie hasło</button>
       </div>
-      <button @click.prevent="login()" class="submit-button">Zaloguj się</button>
+      <button @click.prevent="login()" class="submit-button"><router-link to="/">Zaloguj się</router-link></button>
     </form>
     <form class="auth-form" :class="{ 'show-form': currentForm === 'register' }">
       <div class="form-section">

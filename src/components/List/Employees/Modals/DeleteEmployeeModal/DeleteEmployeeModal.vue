@@ -3,7 +3,7 @@
 <template>
   <div class="new-employee-modal-container">
     <button class="modalOpenButton" @click="isDeleteModalClosed = !isDeleteModalClosed">
-      <fa-icon class="employee-icon far fa-2x" :icon="['far', 'trash-alt']" />
+      <fa-icon class="employee-icon far fa-2x" :icon="['fas', 'trash-alt']" />
     </button>
     <div
       @click="isDeleteModalClosed = true"

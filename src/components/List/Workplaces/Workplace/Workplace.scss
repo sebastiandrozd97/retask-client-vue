@@ -10,7 +10,7 @@
 
   .employee-details {
     @media only screen and (min-width: 1024px) {
-      width: calc(100% - 170px);
+      width: calc(100% - 190px);
     }
 
     .item-details-wrap {
@@ -68,8 +68,34 @@
     }
   }
 
+  .go-to-diary-button {
+    padding: 0;
+    svg {
+      width: 30px;
+    }
+  }
+
+  .diary-button {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: inherit;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: #0063f7;
+      cursor: pointer;
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
   .icons {
-    width: 100px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
     margin: 20px auto 20px auto;

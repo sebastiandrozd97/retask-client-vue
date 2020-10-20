@@ -4,7 +4,7 @@
 <template>
   <div class="edit-workday-modal-container">
     <button class="modalOpenButton" @click="isEditModalClosed = !isEditModalClosed">
-      <fa-icon class="fa-2x" :icon="['far', 'edit']" />
+      <fa-icon class="fa-2x" :icon="['fas', 'edit']" />
     </button>
     <div
       @click="isEditModalClosed = true"

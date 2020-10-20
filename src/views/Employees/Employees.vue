@@ -13,7 +13,7 @@
         <span>Numer telefonu</span>
         <span>Status zatrudnienia</span>
         <span>Liczba godzin</span>
-        <span>Ostatni dzień roboczy</span>
+        <span>Ostatni wpis</span>
       </div>
       <Employee v-for="(worker, index) in filteredWorkers" :key="index" :worker="worker" />
       <div class="new-employee" @click="$refs.newEmployeeModal.changeModalState()">Dodaj pracownika</div>

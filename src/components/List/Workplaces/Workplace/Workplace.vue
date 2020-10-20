@@ -43,6 +43,10 @@
       </div>
     </router-link>
     <div class="icons">
+      <router-link class="go-to-diary-button" :to="{ name: 'WorkplacesDiary', params: { id: workplace.id } }"
+        ><button class="diary-button">
+          <fa-icon class="employee-icon far fa-2x" :icon="['fas', 'clipboard-list']" /></button
+      ></router-link>
       <EditWorkplaceModal :workplace="workplace" />
       <DeleteWorkplaceModal />
     </div>
