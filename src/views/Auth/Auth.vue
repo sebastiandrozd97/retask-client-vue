@@ -12,7 +12,7 @@
           type="text"
           name="login-login"
           placeholder="Nazwa użytkownika"
-          v-model="loginEmail"
+          v-model="email"
           :required="currentForm === 'login'"
         />
       </div>
@@ -23,7 +23,7 @@
           type="password"
           name="login-password"
           placeholder="Hasło"
-          v-model="loginPassword"
+          v-model="password"
           :required="currentForm === 'login'"
         />
       </div>
@@ -41,6 +41,7 @@
           type="text"
           name="firstName"
           placeholder="Imię"
+          v-model="registerFirstName"
           :required="currentForm === 'register'"
         />
       </div>
@@ -51,6 +52,29 @@
           type="text"
           name="lastName"
           placeholder="Nazwisko"
+          v-model="registerLastName"
+          :required="currentForm === 'register'"
+        />
+      </div>
+      <div class="form-section">
+        <label class="form-label" for="userName"></label>
+        <input
+          class="form-input"
+          type="text"
+          name="userName"
+          placeholder="Nazwa użytkownika"
+          v-model="registerUserName"
+          :required="currentForm === 'register'"
+        />
+      </div>
+      <div class="form-section">
+        <label class="form-label" for="phoneNumber"></label>
+        <input
+          class="form-input"
+          type="text"
+          name="phoneNumber"
+          placeholder="Numer telefonu"
+          v-model="registerPhoneNumber"
           :required="currentForm === 'register'"
         />
       </div>
@@ -61,6 +85,7 @@
           type="email"
           name="register-email"
           placeholder="Adres email"
+          v-model="email"
           :required="currentForm === 'register'"
         />
       </div>
@@ -71,6 +96,7 @@
           type="password"
           name="register-password"
           placeholder="Hasło"
+          v-model="password"
           :required="currentForm === 'register'"
         />
       </div>
