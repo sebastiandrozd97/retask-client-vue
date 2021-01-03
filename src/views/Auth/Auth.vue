@@ -12,6 +12,7 @@
           type="text"
           name="login-login"
           placeholder="Nazwa użytkownika"
+          v-model="loginEmail"
           :required="currentForm === 'login'"
         />
       </div>
@@ -22,6 +23,7 @@
           type="password"
           name="login-password"
           placeholder="Hasło"
+          v-model="loginPassword"
           :required="currentForm === 'login'"
         />
       </div>
@@ -29,7 +31,7 @@
         <button @click.prevent="form = 'register'">Zarejestruj się</button> lub
         <button @click.prevent="form = 'remind'">przypomnij sobie hasło</button>
       </div>
-      <button @click.prevent="login()" class="submit-button">Zaloguj się</button>
+      <button @click.prevent="loginUser()" class="submit-button">Zaloguj się</button>
     </form>
     <form class="auth-form" :class="{ 'show-form': currentForm === 'register' }">
       <div class="form-section">
