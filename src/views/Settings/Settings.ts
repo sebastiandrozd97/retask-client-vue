@@ -1,13 +1,18 @@
 import { Component, Vue } from 'vue-property-decorator';
-import user from '@/mockData/user.json';
 import { User } from '@/models/User';
+import axios from 'axios';
 
 @Component
 export default class Settings extends Vue {
   private form = 'default';
+  private user = new User();
 
-  private get user(): User {
-    return user;
+  private async getUser(): Promise<User> {
+    const request = await axios.get(`${process.env.VUE_APP_API_URL}/users/current`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+    });
+
+    return request.data;
   }
 
   get currentForm() {
@@ -20,5 +25,9 @@ export default class Settings extends Vue {
 
   changePassword() {
     console.log('Zmieniono hasło');
+  }
+
+  async created() {
+    this.user = await this.getUser();
   }
 }

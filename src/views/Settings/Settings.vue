@@ -23,7 +23,7 @@
           type="text"
           name="default-username"
           placeholder="Nazwa użytkownika"
-          v-model="user.firstName"
+          v-model="user.userName"
           :required="currentForm === 'default'"
         />
       </div>

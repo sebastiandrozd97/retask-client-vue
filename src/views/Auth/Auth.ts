@@ -1,31 +1,27 @@
 import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
+import { User } from '@/models/User';
 
 @Component
 export default class Auth extends Vue {
   private form = 'login';
 
-  private email = '';
-  private password = '';
-
-  private registerUserName = '';
-  private registerFirstName = '';
-  private registerLastName = '';
-  private registerPhoneNumber = '';
+  private loginUser = new User();
+  private registerUser = new User();
 
   get currentForm() {
     return this.form;
   }
 
-  loginUser() {
-    if (this.email && this.password) {
+  signIn() {
+    if (this.loginUser.email && this.loginUser.password) {
       axios
         .request({
           url: `${process.env.VUE_APP_API_URL}/users/login`,
           method: 'post',
           data: {
-            email: this.email,
-            password: this.password
+            email: this.loginUser.email,
+            password: this.loginUser.password
           }
         })
         .then(response => {
@@ -38,20 +34,13 @@ export default class Auth extends Vue {
     }
   }
 
-  register() {
-    if (this.email && this.password && this.registerUserName && this.registerFirstName && this.registerLastName) {
+  signUp() {
+    if (this.registerUser.email && this.registerUser.password) {
       axios
         .request({
           url: `${process.env.VUE_APP_API_URL}/users/register`,
           method: 'post',
-          data: {
-            username: this.registerUserName,
-            email: this.email,
-            password: this.password,
-            firstName: this.registerFirstName,
-            lastName: this.registerLastName,
-            phoneNumber: this.registerPhoneNumber
-          }
+          data: this.registerUser
         })
         .then(response => {
           localStorage.setItem('accessToken', response.data.token);

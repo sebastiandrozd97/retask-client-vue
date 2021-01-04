@@ -31,7 +31,7 @@
         <button @click.prevent="form = 'register'">Zarejestruj się</button> lub
         <button @click.prevent="form = 'remind'">przypomnij sobie hasło</button>
       </div>
-      <button @click.prevent="loginUser()" class="submit-button">Zaloguj się</button>
+      <button @click.prevent="signIn()" class="submit-button">Zaloguj się</button>
     </form>
     <form class="auth-form" :class="{ 'show-form': currentForm === 'register' }">
       <div class="form-section">
@@ -104,7 +104,7 @@
         <button @click.prevent="form = 'login'">Zaloguj się</button> lub
         <button @click.prevent="form = 'remind'">przypomnij sobie hasło</button>
       </div>
-      <button @click.prevent="register()" class="submit-button">Zarejestruj się</button>
+      <button @click.prevent="signUp()" class="submit-button">Zarejestruj się</button>
     </form>
     <form class="auth-form" :class="{ 'show-form': currentForm === 'remind' }">
       <div class="form-section">
