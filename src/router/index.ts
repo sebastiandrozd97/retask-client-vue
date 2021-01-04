@@ -92,13 +92,25 @@ const router = new VueRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
-  let isLoggedIn = false;
-  const request = await axios.get(`${process.env.VUE_APP_API_URL}/users/current`, {
-    headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
-  });
+  if (to.name === 'Auth') {
+    next();
+  }
 
-  if (request.status === 200) {
-    isLoggedIn = true;
+  let isLoggedIn = false;
+
+  try {
+    const request = await axios.get(`${process.env.VUE_APP_API_URL}/users/current`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+    });
+
+    if (request.status === 200 && request.data.isHired) {
+      isLoggedIn = true;
+    }
+  } catch (error) {
+    console.log(error);
+    next({
+      name: 'Auth'
+    });
   }
 
   if (to.matched.some(rec => rec.meta.requiresAuth)) {

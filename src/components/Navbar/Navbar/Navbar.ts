@@ -21,6 +21,11 @@ export default class Navbar extends Vue {
     return { ['tabindex']: -1 };
   }
 
+  private signOut() {
+    localStorage.removeItem('accessToken');
+    console.log('logout');
+  }
+
   @Watch('isMenuOpen')
   onMenuOpen(val: boolean) {
     if (val) {

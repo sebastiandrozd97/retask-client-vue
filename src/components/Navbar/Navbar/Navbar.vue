@@ -35,7 +35,7 @@
               </router-link>
               <notifications />
             </div>
-            <router-link class="nav-item-link logout-button" to="/auth">
+            <router-link class="nav-item-link logout-button" @click.native="signOut" to="/auth">
               <fa-icon class="nav-icon fa-lg" icon="sign-out-alt" />
               <span class="menu-text">Wyloguj się</span>
             </router-link>

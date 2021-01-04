@@ -12,7 +12,7 @@
           type="text"
           name="login-login"
           placeholder="Nazwa użytkownika"
-          v-model="email"
+          v-model="loginUser.email"
           :required="currentForm === 'login'"
         />
       </div>
@@ -23,7 +23,7 @@
           type="password"
           name="login-password"
           placeholder="Hasło"
-          v-model="password"
+          v-model="loginUser.password"
           :required="currentForm === 'login'"
         />
       </div>
@@ -41,7 +41,7 @@
           type="text"
           name="firstName"
           placeholder="Imię"
-          v-model="registerFirstName"
+          v-model="registerUser.firstName"
           :required="currentForm === 'register'"
         />
       </div>
@@ -52,7 +52,7 @@
           type="text"
           name="lastName"
           placeholder="Nazwisko"
-          v-model="registerLastName"
+          v-model="registerUser.lastName"
           :required="currentForm === 'register'"
         />
       </div>
@@ -63,7 +63,7 @@
           type="text"
           name="userName"
           placeholder="Nazwa użytkownika"
-          v-model="registerUserName"
+          v-model="registerUser.userName"
           :required="currentForm === 'register'"
         />
       </div>
@@ -74,7 +74,7 @@
           type="text"
           name="phoneNumber"
           placeholder="Numer telefonu"
-          v-model="registerPhoneNumber"
+          v-model="registerUser.phoneNumber"
           :required="currentForm === 'register'"
         />
       </div>
@@ -85,7 +85,7 @@
           type="email"
           name="register-email"
           placeholder="Adres email"
-          v-model="email"
+          v-model="registerUser.email"
           :required="currentForm === 'register'"
         />
       </div>
@@ -96,7 +96,7 @@
           type="password"
           name="register-password"
           placeholder="Hasło"
-          v-model="password"
+          v-model="registerUser.password"
           :required="currentForm === 'register'"
         />
       </div>
