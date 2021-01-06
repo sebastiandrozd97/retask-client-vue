@@ -1,11 +1,12 @@
-import workplaces from '@/mockData/workplaces.json';
 import { Workplace } from '@/models/Workplace';
 import { Component, Watch, Vue } from 'vue-property-decorator';
 import { times } from '@/utils/GetTimeRange';
+import axios from 'axios';
 
 @Component
 export default class NewWorkdayModal extends Vue {
   private isModalClosed = true;
+  private workplaces: Workplace[] = [];
 
   newWork = {
     date: '',
@@ -21,6 +22,20 @@ export default class NewWorkdayModal extends Vue {
     this.isModalClosed = !this.isModalClosed;
   }
 
+  private async getWorkplaces(): Promise<Workplace[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/workplaces`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      console.log(request.data);
+      return request.data;
+    } catch (error) {
+      console.log(error);
+      return this.workplaces;
+    }
+  }
+
   get times(): string[] {
     return times();
   }
@@ -29,8 +44,8 @@ export default class NewWorkdayModal extends Vue {
     // TODO: finish function
   }
 
-  get workplaces(): Workplace[] {
-    return workplaces;
+  async created() {
+    this.workplaces = await this.getWorkplaces();
   }
 
   @Watch('isModalClosed')

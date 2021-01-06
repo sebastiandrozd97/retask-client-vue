@@ -1,11 +1,12 @@
-export type Workplace = {
-  id: number;
-  name: string;
-  address: {
-    city: string;
-    street: string;
-  };
-  client: string;
-  isOpen: boolean;
-  worktime: number;
-};
+import { Guid } from 'guid-typescript';
+
+export class Workplace {
+  id: Guid = Guid.create();
+  name = '';
+  isOpen = true;
+  city = '';
+  street = '';
+  clientId: Guid = Guid.create();
+  clientFirstName = '';
+  clientLastName = '';
+}

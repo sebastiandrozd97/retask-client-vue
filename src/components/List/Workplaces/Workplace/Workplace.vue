@@ -17,13 +17,13 @@
           <span>
             Adres:
           </span>
-          <span> {{ workplace.address.city }}, {{ workplace.address.street }} </span>
+          <span> {{ workplace.city }}, {{ workplace.street }} </span>
         </div>
         <div class="details-section client-section">
           <span>
             Klient:
           </span>
-          <span>{{ workplace.client }}</span>
+          <span>{{ `${workplace.clientFirstName} ${workplace.clientLastName}` }}</span>
         </div>
         <div class="details-section">
           <span>

@@ -27,7 +27,7 @@
             <label class="modal-label" for="city">Miasto</label>
             <input
               class="modal-input"
-              :value="workplace.address.city"
+              :value="workplace.city"
               type="text"
               name="city"
               placeholder="Wpisz nazwę miasta"
@@ -37,7 +37,7 @@
             <label class="modal-label" for="street">Ulica i numer domu</label>
             <input
               class="modal-input"
-              :value="workplace.address.street"
+              :value="workplace.street"
               type="text"
               name="street"
               placeholder="Wpisz ulicę i numer domu"
@@ -45,8 +45,8 @@
           </div>
           <div class="form-element">
             <label class="modal-label" for="client">Klient</label>
-            <select class="modal-select" v-model="workplace.client" name="client" required>
-              <option v-for="(client, index) in clients" :key="index" :value="client.firstName + ' ' + client.lastName"
+            <select class="modal-select" v-model="workplace.clientId" name="client" required>
+              <option v-for="(client, index) in clients" :key="index" :value="client.id"
                 >{{ client.firstName }} {{ client.lastName }}</option
               >
             </select>

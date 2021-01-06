@@ -1,7 +1,8 @@
 import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 import { PropType } from 'vue';
-import clients from '@/mockData/clients.json';
 import { Workplace } from '@/models/Workplace';
+import axios from 'axios';
+import { Client } from '@/models/Client';
 
 @Component
 export default class EditWorkplaceModal extends Vue {
@@ -11,11 +12,25 @@ export default class EditWorkplaceModal extends Vue {
   })
   private workplace!: Workplace;
 
-  private get clients() {
-    return clients;
+  private isEditModalClosed = true;
+  private clients: Client[] = [];
+
+  private async getClients(): Promise<Client[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/clients`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      return request.data;
+    } catch (error) {
+      console.log(error);
+      return this.clients;
+    }
   }
 
-  private isEditModalClosed = true;
+  async created() {
+    this.clients = await this.getClients();
+  }
 
   @Watch('isEditModalClosed')
   onModalOpen(val: boolean) {

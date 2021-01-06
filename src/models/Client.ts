@@ -1,6 +1,10 @@
-export type Client = {
-  id: number;
-  firstName: string;
-  lastName: string;
-  telephoneNumber: string;
-};
+import { Guid } from 'guid-typescript';
+import { Workplace } from './Workplace';
+
+export class Client {
+  id: Guid = Guid.create();
+  firstName = '';
+  lastName = '';
+  phoneNumber?: string;
+  workplaces?: Workplace[];
+}
