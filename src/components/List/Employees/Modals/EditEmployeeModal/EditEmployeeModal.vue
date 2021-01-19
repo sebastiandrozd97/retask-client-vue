@@ -17,7 +17,7 @@
             <label class="modal-label" for="first-name">Imię</label>
             <input
               class="modal-input"
-              :value="worker.firstName"
+              v-model="worker.firstName"
               type="text"
               name="first-name"
               placeholder="Wpisz imię pracownika"
@@ -27,7 +27,7 @@
             <label class="modal-label" for="last-name">Nazwisko</label>
             <input
               class="modal-input"
-              :value="worker.lastName"
+              v-model="worker.lastName"
               type="text"
               name="last-name"
               placeholder="Wpisz nazwisko pracownika"
@@ -37,7 +37,7 @@
             <label class="modal-label" for="telephone-number">Numer telefonu</label>
             <input
               class="modal-input"
-              :value="worker.telephoneNumber"
+              v-model="worker.phoneNumber"
               type="text"
               name="telephone-number"
               placeholder="Wpisz numer telefonu pracownika"
@@ -45,7 +45,9 @@
           </div>
           <div class="form-buttons">
             <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="cancel-button">Anuluj</button>
-            <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="submit-button">Zatwierdź</button>
+            <button @click.prevent="isEditModalClosed = !isEditModalClosed" @click="updateWorker" class="submit-button">
+              Zatwierdź
+            </button>
           </div>
         </form>
       </div>
