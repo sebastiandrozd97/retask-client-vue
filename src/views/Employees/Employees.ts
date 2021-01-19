@@ -1,7 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Employee from '@/components/List/Employees/Employee/Employee.vue';
 import NewEmployeeModal from '@/components/List/Employees/Modals/NewEmployeeModal/NewEmployeeModal.vue';
-import workers from '@/mockData/workers.json';
+import axios from 'axios';
 import { Worker } from '@/models/Worker';
 
 @Component({
@@ -11,18 +11,30 @@ import { Worker } from '@/models/Worker';
   }
 })
 export default class Employees extends Vue {
-  private get workers(): Worker[] {
-    return workers;
+  private workers: Worker[] = [];
+  private feedback = '';
+
+  private async getWorkers(): Promise<Worker[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/users`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      return request.data.sort(this.compareWorkers);
+    } catch (error) {
+      this.feedback = error;
+      return this.workers;
+    }
   }
 
   private compareWorkers(a: Worker, b: Worker) {
-    if (a.isEmployed > b.isEmployed) return -1;
-    if (a.isEmployed < b.isEmployed) return 1;
+    if (a.isHired > b.isHired) return -1;
+    if (a.isHired < b.isHired) return 1;
 
     return 0;
   }
 
-  private get filteredWorkers(): Worker[] {
-    return this.workers.sort(this.compareWorkers);
+  async created() {
+    this.workers = await this.getWorkers();
   }
 }

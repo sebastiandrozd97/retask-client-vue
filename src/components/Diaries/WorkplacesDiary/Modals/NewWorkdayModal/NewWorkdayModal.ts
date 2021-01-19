@@ -1,4 +1,4 @@
-import employees from '@/mockData/workers.json';
+import axios from 'axios';
 import { Worker } from '@/models/Worker';
 import { Component, Watch, Vue } from 'vue-property-decorator';
 import { times } from '@/utils/GetTimeRange';
@@ -6,6 +6,8 @@ import { times } from '@/utils/GetTimeRange';
 @Component
 export default class NewWorkdayModal extends Vue {
   private isModalClosed = true;
+  private workers: Worker[] = [];
+  private feedback = '';
 
   newWork = {
     date: '',
@@ -29,8 +31,21 @@ export default class NewWorkdayModal extends Vue {
     // TODO: finish function
   }
 
-  get employees(): Worker[] {
-    return employees;
+  private async getWorkers(): Promise<Worker[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/users`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      return request.data;
+    } catch (error) {
+      this.feedback = error;
+      return this.workers;
+    }
+  }
+
+  async created() {
+    this.workers = await this.getWorkers();
   }
 
   @Watch('isModalClosed')

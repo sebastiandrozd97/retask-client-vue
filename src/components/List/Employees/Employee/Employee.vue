@@ -26,14 +26,14 @@
             Numer telefonu:
           </span>
           <span>
-            {{ worker.telephoneNumber }}
+            {{ worker.phoneNumber }}
           </span>
         </div>
         <div class="details-section">
           <span>
             Status zatrudnienia:
           </span>
-          <span class="working" v-if="worker.isEmployed">Pracuje</span>
+          <span class="working" v-if="worker.isHired">Pracuje</span>
           <span class="not-working" v-else>Nie pracuje</span>
         </div>
         <div class="details-section">

@@ -12,6 +12,7 @@ import axios from 'axios';
 })
 export default class Clients extends Vue {
   private clients: ClientModel[] = [];
+  private feedback = '';
 
   private async getClients(): Promise<ClientModel[]> {
     try {
@@ -21,7 +22,7 @@ export default class Clients extends Vue {
 
       return request.data;
     } catch (error) {
-      console.log(error);
+      this.feedback = error;
       return this.clients;
     }
   }

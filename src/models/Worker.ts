@@ -2,8 +2,9 @@ export type Worker = {
   id: number;
   firstName: string;
   lastName: string;
-  telephoneNumber: string;
-  isEmployed: boolean;
-  worktime: number;
-  lastWorkday: string;
+  email: string;
+  phoneNumber: string;
+  isSupervisor: boolean;
+  isHired: boolean;
+  userName: string;
 };

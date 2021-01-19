@@ -5,6 +5,7 @@ import { User } from '@/models/User';
 @Component
 export default class Auth extends Vue {
   private form = 'login';
+  private feedback = '';
 
   private loginUser = new User();
   private registerUser = new User();
@@ -28,9 +29,7 @@ export default class Auth extends Vue {
           localStorage.setItem('accessToken', response.data.token);
           this.$router.push({ name: 'Home' });
         })
-        .catch(error => {
-          console.log(error);
-        });
+        .catch(error => this.feedback = error);
     }
   }
 

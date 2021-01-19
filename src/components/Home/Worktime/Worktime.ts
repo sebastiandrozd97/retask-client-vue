@@ -23,25 +23,17 @@ export default class Worktime extends Vue {
   }
 
   private get maxPage() {
-    return this.workersWithValidWorktime.length / this.itemsPerPage;
+    return this.hiredWorkers.length / this.itemsPerPage;
   }
 
-  private get workersWithValidWorktime() {
+  private get hiredWorkers() {
     return this.workers.filter(worker => {
-      if (worker.worktime > 0) return worker;
+      if (worker.isHired) return worker;
     });
   }
 
-  private compareWorkers(a: Worker, b: Worker) {
-    if (a.worktime > b.worktime) return -1;
-    if (a.worktime < b.worktime) return 1;
-
-    return 0;
-  }
-
   private get filteredWorkers(): Worker[] {
-    this.workersWithValidWorktime.sort(this.compareWorkers);
-    return this.workersWithValidWorktime.filter((worker, index) => {
+    return this.hiredWorkers.filter((worker, index) => {
       if (index < this.page * this.itemsPerPage && index >= this.page * this.itemsPerPage - this.itemsPerPage)
         return worker;
     });

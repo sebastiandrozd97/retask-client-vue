@@ -1,6 +1,6 @@
 import { Workday as WorkdayModel } from '@/models/Workday';
 import { PropType } from 'vue';
-import employees from '@/mockData/workers.json';
+import axios from 'axios';
 import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 import { Worker } from '@/models/Worker';
 import { times } from '@/utils/GetTimeRange';
@@ -14,6 +14,8 @@ export default class EditWorkdayModal extends Vue {
   work!: WorkdayModel;
 
   private isEditModalClosed = true;
+  private workers: Worker[] = [];
+  private feedback = '';
 
   get times(): string[] {
     return times();
@@ -23,8 +25,21 @@ export default class EditWorkdayModal extends Vue {
     // TODO: finish function
   }
 
-  get employees(): Worker[] {
-    return employees;
+  private async getWorkers(): Promise<Worker[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/users`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      return request.data;
+    } catch (error) {
+      this.feedback = error;
+      return this.workers;
+    }
+  }
+
+  async created() {
+    this.workers = await this.getWorkers();
   }
 
   @Watch('isEditModalClosed')

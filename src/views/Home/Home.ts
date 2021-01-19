@@ -7,7 +7,6 @@ import Worktime from '@/components/Home/Worktime/Worktime.vue';
 import GoTo from '@/components/Home/GoTo/GoTo.vue';
 import barData from '@/mockData/barChart.json';
 import pieData from '@/mockData/pieChart.json';
-import workers from '@/mockData/workers.json';
 import { PieChartData } from '@/models/PieChartData';
 import { BarChartData } from '@/models/BarChartData';
 import { Worker } from '@/models/Worker';
@@ -26,6 +25,8 @@ import axios from 'axios';
 })
 export default class Home extends Vue {
   private workplaces: Workplace[] = [];
+  private workers: Worker[] = [];
+  private feedback = '';
 
   private get barData(): BarChartData[] {
     return barData;
@@ -35,8 +36,17 @@ export default class Home extends Vue {
     return pieData;
   }
 
-  private get workers(): Worker[] {
-    return workers;
+  private async getWorkers(): Promise<Worker[]> {
+    try {
+      const request = await axios.get(`${process.env.VUE_APP_API_URL}/users`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
+      });
+
+      return request.data;
+    } catch (error) {
+      this.feedback = error;
+      return this.workers;
+    }
   }
 
   private async getWorkplaces(): Promise<Workplace[]> {
@@ -54,5 +64,6 @@ export default class Home extends Vue {
 
   async created() {
     this.workplaces = await this.getWorkplaces();
+    this.workers = await this.getWorkers();
   }
 }
