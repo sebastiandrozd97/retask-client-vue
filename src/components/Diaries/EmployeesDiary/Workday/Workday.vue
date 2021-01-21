@@ -27,14 +27,14 @@
           <span>
             Budowa:
           </span>
-          <span>{{ work.workplace }}</span>
+          <span>{{ work.workplace.name }}</span>
         </div>
         <div class="details-section">
           <span>
             Wykonana praca:
           </span>
           <span>
-            {{ work.workDone }}
+            {{ work.task }}
           </span>
         </div>
       </div>

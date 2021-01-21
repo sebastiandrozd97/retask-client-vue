@@ -14,7 +14,13 @@
         <span class="modal-title">Usunąć pracownika?</span>
         <div class="form-buttons">
           <button @click.prevent="isDeleteModalClosed = !isDeleteModalClosed" class="cancel-button">Anuluj</button>
-          <button @click.prevent="isDeleteModalClosed = !isDeleteModalClosed" class="submit-button">Usuń</button>
+          <button
+            @click.prevent="isDeleteModalClosed = !isDeleteModalClosed"
+            @click="deleteWorker"
+            class="submit-button"
+          >
+            Usuń
+          </button>
         </div>
       </div>
     </div>

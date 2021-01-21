@@ -25,14 +25,14 @@
           Numer telefonu:
         </span>
         <span>
-          {{ client.telephoneNumber }}
+          {{ client.phoneNumber }}
         </span>
       </div>
       <div class="details-section">
         <span>
           Liczba budów:
         </span>
-        <span>2</span>
+        <span>{{ getWorkplacesCount() }}</span>
       </div>
       <div class="details-section">
         <span>
@@ -43,7 +43,7 @@
     </div>
     <div class="icons">
       <EditClientModal :client="client" />
-      <DeleteClientModal />
+      <DeleteClientModal :client="client" />
     </div>
   </div>
 </template>

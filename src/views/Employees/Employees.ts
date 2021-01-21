@@ -12,7 +12,6 @@ import { Worker } from '@/models/Worker';
 })
 export default class Employees extends Vue {
   private workers: Worker[] = [];
-  private feedback = '';
 
   private async getWorkers(): Promise<Worker[]> {
     try {
@@ -22,7 +21,6 @@ export default class Employees extends Vue {
 
       return request.data.sort(this.compareWorkers);
     } catch (error) {
-      this.feedback = error;
       return this.workers;
     }
   }

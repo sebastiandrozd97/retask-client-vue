@@ -10,7 +10,7 @@
       :class="{ 'closed-modal': isModalClosed }"
     >
       <div class="modal" @click.stop>
-        <span class="modal-title">Edycja dnia pracy</span>
+        <span class="modal-title">Nowa wykonana praca</span>
         <form class="modal-form">
           <div class="form-element row-display">
             <label class="modal-label" for="date">Data</label>
@@ -43,9 +43,9 @@
           </div>
           <div class="form-element row-display">
             <label class="modal-label" for="workplace">Budowa</label>
-            <select class="modal-select" v-model="newWork.workplace" name="workplace" required>
+            <select class="modal-select" v-model="newWork.workplaceId" name="workplace" required>
               <option value="">Wybierz budowę</option>
-              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.name">{{
+              <option v-for="workplace in workplaces" :key="workplace.id" :value="workplace.id">{{
                 workplace.name
               }}</option>
             </select>
@@ -54,7 +54,7 @@
             <label class="modal-label" for="work-done">Wykonana praca</label>
             <textarea
               class="modal-textarea"
-              v-model="newWork.workDone"
+              v-model="newWork.task"
               name="work-done"
               placeholder="Wpisz wykonaną pracę"
               oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'

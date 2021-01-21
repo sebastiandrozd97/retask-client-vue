@@ -1,11 +1,14 @@
+import { Worker } from './Worker';
+import { Workplace } from './Workplace';
+
 export type Workday = {
-  id: number;
-  employee: string;
+  id: string;
   date: string;
   workingFrom: string;
   workingTo: string;
   worktime: number;
-  workplace: string;
-  workDone: string;
+  task: string;
   additionalInfo: string;
+  workplace: Workplace;
+  worker: Worker;
 };

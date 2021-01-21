@@ -17,7 +17,7 @@
             <label class="modal-label" for="first-name">Imię</label>
             <input
               class="modal-input"
-              :value="client.firstName"
+              v-model="client.firstName"
               type="text"
               name="first-name"
               placeholder="Wpisz imię klienta"
@@ -27,7 +27,7 @@
             <label class="modal-label" for="last-name">Nazwisko</label>
             <input
               class="modal-input"
-              :value="client.lastName"
+              v-model="client.lastName"
               type="text"
               name="last-name"
               placeholder="Wpisz nazwisko klienta"
@@ -37,7 +37,7 @@
             <label class="modal-label" for="telephone-number">Numer telefonu</label>
             <input
               class="modal-input"
-              :value="client.telephoneNumber"
+              v-model="client.phoneNumber"
               type="text"
               name="telephone-number"
               placeholder="Wpisz numer telefonu klienta"
@@ -45,7 +45,9 @@
           </div>
           <div class="form-buttons">
             <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="cancel-button">Anuluj</button>
-            <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="submit-button">Zatwierdź</button>
+            <button @click.prevent="isEditModalClosed = !isEditModalClosed" @click="updateClient" class="submit-button">
+              Zatwierdź
+            </button>
           </div>
         </form>
       </div>

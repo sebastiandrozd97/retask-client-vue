@@ -13,9 +13,10 @@ export default class NewWorkdayModal extends Vue {
     workingFrom: '',
     workingTo: '',
     worktime: 0,
-    workplace: '',
-    workDone: '',
-    additionalInfo: ''
+    workplaceId: '',
+    workerId: this.$route.params.id,
+    task: '',
+    additionalInfo: null
   };
 
   changeModalState(): void {
@@ -40,8 +41,22 @@ export default class NewWorkdayModal extends Vue {
     return times();
   }
 
-  addWork() {
-    // TODO: finish function
+  private async addWork(): Promise<void> {
+    if (this.newWork.workerId && this.newWork.workplaceId && this.newWork.date) {
+      axios
+        .request({
+          url: `${process.env.VUE_APP_API_URL}/workdays`,
+          method: 'post',
+          headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+          data: this.newWork
+        })
+        .then(response => {
+          window.location.reload();
+        })
+        .catch(error => console.log(error));
+    } else {
+      console.log('bad request');
+    }
   }
 
   async created() {

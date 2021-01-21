@@ -58,7 +58,7 @@
           <fa-icon class="employee-icon far fa-2x" :icon="['fas', 'clipboard-list']" /></button
       ></router-link>
       <EditEmployeeModal :worker="worker" />
-      <DeleteEmployeeModal />
+      <DeleteEmployeeModal :worker="worker" />
     </div>
   </div>
 </template>

@@ -43,8 +43,8 @@
           </div>
           <div class="form-element row-display">
             <label class="modal-label" for="workplace">Budowa</label>
-            <select class="modal-select" v-model="work.workplace" name="workplace" required>
-              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.name">{{
+            <select class="modal-select" v-model="work.workplace.id" name="workplace" required>
+              <option v-for="(workplace, index) in workplaces" :key="index" :value="workplace.id">{{
                 workplace.name
               }}</option>
             </select>
@@ -53,7 +53,7 @@
             <label class="modal-label" for="work-done">Wykonana praca</label>
             <textarea
               class="modal-textarea"
-              v-model="work.workDone"
+              v-model="work.task"
               name="work-done"
               placeholder="Wpisz wykonaną pracę"
               oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
@@ -73,7 +73,11 @@
           </div>
           <div class="form-buttons">
             <button @click.prevent="isEditModalClosed = !isEditModalClosed" class="cancel-button">Anuluj</button>
-            <button @click.prevent="isEditModalClosed = !isEditModalClosed" @click="editWork()" class="submit-button">
+            <button
+              @click.prevent="isEditModalClosed = !isEditModalClosed"
+              @click="updateWorkday()"
+              class="submit-button"
+            >
               Zatwierdź
             </button>
           </div>
